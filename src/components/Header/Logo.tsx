@@ -5,7 +5,7 @@ export default function Logo() {
         <div className={"Logo"}>
             <Image
                 alt={"Logo"}
-                src={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/Logo.png"}
+                src={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Logo.png"}
             />
         </div>
     );

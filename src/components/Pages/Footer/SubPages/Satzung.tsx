@@ -1,6 +1,6 @@
 export default function Satzung(props: any) {
     return (
-        <a href={ "https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/Satzung.pdf" } >
+        <a href={ "https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Satzung.pdf" } >
             {props.title}
         </a>
     );

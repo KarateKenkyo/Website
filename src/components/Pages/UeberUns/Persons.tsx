@@ -151,7 +151,7 @@ export default function Persons() {
                     color={"dark"}
                     grade={"5. Dan"}
                     position={personsContent[current_lang][0] + ", " + personsContent[current_lang][2] + ", " + personsContent[current_lang][3]}
-                    url={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/Zsolt.jpg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Zsolt.jpg"}
                     champion={true}
                     fulltext="TODO"
                     succ1={zsoltContent[current_lang][0]}
@@ -166,7 +166,7 @@ export default function Persons() {
                     quote={raphaeleContent[current_lang][0]}
                     quoteOriginDifferent={true}
                     quoteOrigin={raphaeleContent[current_lang][1]}
-                    url={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/Raphaele-2.jpg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Raphaele-2.jpg"}
                     fulltext={raphaeleContent[current_lang][6]}
                     champion={true}
                     succ1={raphaeleContent[current_lang][2]}
@@ -191,7 +191,7 @@ export default function Persons() {
                     color={"dark"}
                     grade={"1. Dan"}
                     position={personsContent[current_lang][0] + ", " + personsContent[current_lang][6] + ", " + personsContent[current_lang][4]}
-                    url={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/LandingPage-2.jpeg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-2.jpeg"}
                     champion={true}
                     fulltext="TODO"
                     succ1={zsoltContent[current_lang][0]}
@@ -201,7 +201,7 @@ export default function Persons() {
                     color={"#6D4326"}
                     grade={"1. Kyu"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][7]}
-                    url={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/LandingPage-4.jpeg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-4.jpeg"}
                     fulltext={"TODO"}
                 />
                 <MyCard
@@ -209,7 +209,7 @@ export default function Persons() {
                     color={"dark"}
                     grade={"1. Dan"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][5]}
-                    url={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/LandingPage-7.jpeg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-7.jpeg"}
                     champion={true}
                     fulltext={personsContent[current_lang][11]}
                     succ1={zsoltContent[current_lang][0]}
@@ -219,14 +219,14 @@ export default function Persons() {
                     color={"#6D4326"}
                     grade={"1. Kyu"}
                     position={personsContent[current_lang][1]}
-                    url={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/LandingPage-9.jpeg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-9.jpeg"}
                     fulltext="TODO"
                 />
                 <MyCard
                     title={"Maria Licciardo"}
                     color={"grape"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][8]}
-                    url={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/LandingPage-3.jpeg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-3.jpeg"}
                     fulltext="TODO"
                 />
             </Flex>

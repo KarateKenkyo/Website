@@ -23,31 +23,31 @@ export default function Language() {
             <div onClick={handleUkr} style={{cursor: "pointer", width: 50, position: "fixed", bottom: 0, margin: 10}}>
                 <Image
                     radius={"md"}
-                    src={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/UKR.png"}
+                    src={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/UKR.png"}
                 />
             </div>
             <div onClick={handleJap} style={{cursor: "pointer", width: 50, position: "fixed", bottom: 40, margin: 10}}>
                 <Image
                     radius={"md"}
-                    src={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/JAP.png"}
+                    src={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/JAP.png"}
                 />
             </div>
             <div onClick={handleUng} style={{cursor: "pointer", width: 50, position: "fixed", bottom: 80, margin: 10}}>
                 <Image
                     radius={"md"}
-                    src={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/UNG.png"}
+                    src={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/UNG.png"}
                 />
             </div>
             <div onClick={handleEng} style={{cursor: "pointer", width: 50, position: "fixed", bottom: 120, margin: 10}}>
                 <Image
                     radius={"md"}
-                    src={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/ENG.png"}
+                    src={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/ENG.png"}
                 />
             </div>
             <div onClick={handleGer} style={{cursor: "pointer", width: 50, position: "fixed", bottom: 160, margin: 10}}>
                 <Image
                     radius={"md"}
-                    src={"https://raw.githubusercontent.com/RaphaeleL/KenkyoWebsite/main/src/assets/GER.png"}
+                    src={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/GER.png"}
                 />
             </div>
         </div>
