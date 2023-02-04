@@ -28,12 +28,6 @@ Die Offizielle Webseite des 'Karateverein Kenkyo Rheinzabern'
 
 ### Subdomains
 
-- [ ] Kurzmitgliedschaften Handle Page
-- [ ] Mitgliederbereich mit Videos 
-
-### Postponed 
-
-- [ ] Menu mit [Drawer](https://mantine.dev/core/drawer/)? (*postponed*)
-  - Aktuelles Menu reicht aus
-- [ ] Kata, Bunkai, ... Videos Seite (*postponed*)
-  - Kamera?
+- [ ] Kurzmitgliedschaften
+- [x] Mitgliederbereich für Videos 
+    - [ ] Kata, Bunkai, ... Videos aufnehmen
