@@ -6,28 +6,14 @@ Die Offizielle Webseite des 'Karateverein Kenkyo Rheinzabern'
 
 ## TODO
 
+- [ ] News Content Dynamisch anhand einer Liste erstellen 
+- [ ] News Content Übersetzten 
+- [ ] Floating News Card Design
+
 - [ ] Kündigungsvorlage PDF
 - [ ] Datenschutzformular PDF
-- [x] Termin Seite
-- [x] Verhaltensregeln Seite
-- [x] Ukrainisch
-- [x] Single Page statt Multi Page
-- [x] Anmeldedaten: Kosten, PDFs, Angebote, Infos, ...
-- [x] Probetraining: Erklärung des Ablaufs, Infos, ...
-- [x] Scroll up Fixed Button 
-- [x] Home: Technik, Strategie, Körperkontrolle, Fitness
-- [x] Über uns: Layout, Warum?, Erfolge, Qualifikationen, Position
-- [x] Übersetzungen
-- [x] Wettkampfregeln als PDF
-- [x] Prüfungsprogramm als PDF
-- [x] Vereinssatzung als PDF
-- [x] Kontaktseite
-- [x] Geschichte Seite
-- [x] Begrifflichkeiten Seite
-- [x] Pfade der URL anpassen 
 
-### Subdomains
+- [ ] Kata, Bunkai, SV, ... Videos aufnehmen
 
-- [ ] Kurzmitgliedschaften
-- [x] Mitgliederbereich für Videos 
-    - [ ] Kata, Bunkai, ... Videos aufnehmen
+- [ ] Kurzmitgliedschaften Subdomain Page
+
