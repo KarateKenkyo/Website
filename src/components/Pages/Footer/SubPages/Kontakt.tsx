@@ -22,6 +22,7 @@ export default function Kontakt(props: any) {
                 </>
             }
             size="xl"
+            not_scrolling={true}
             title={<Title order={1}>{footer[current_lang][4]}</Title>}
             content={
                 <>

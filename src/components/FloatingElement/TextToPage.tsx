@@ -19,14 +19,17 @@ export default function TextToPage(props: any) {
                     title={props.title}
                     size={props.size}
                 >
-                    <ScrollArea style={{ height: 600 }}>
-                        <Spoiler
-                            maxHeight={575}
-                            showLabel={textToPage[current_lang][0]}
-                            hideLabel={textToPage[current_lang][1]}>
-                            {props.content}
-                        </Spoiler>
-                    </ScrollArea>
+                    {!props.not_scrolling &&
+                        <ScrollArea style={{ height: 600 }}>
+                            <Spoiler
+                                maxHeight={575}
+                                showLabel={textToPage[current_lang][0]}
+                                hideLabel={textToPage[current_lang][1]}>
+                                {props.content}
+                            </Spoiler>
+                        </ScrollArea>
+                    }
+                    {props.not_scrolling && props.content}
                 </Modal>
 
                 <Group position="center">

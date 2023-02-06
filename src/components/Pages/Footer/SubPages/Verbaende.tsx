@@ -10,6 +10,7 @@ export default function Verbaende() {
     return (
         <TextToPage
             size="xl"
+            not_scrolling={true}
             openingText={footer[current_lang][6]}
             title={<Title order={1}>{footer[current_lang][6]}</Title>}
             content={
