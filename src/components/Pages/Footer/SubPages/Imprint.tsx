@@ -7,7 +7,6 @@ import {Title} from "@mantine/core";
 import TextToPage from "../../../FloatingElement/TextToPage";
 
 export default function Imprint() {
-
     let current_lang = window.location.href.split("/")[3] as String;
 
     return(<TextToPage

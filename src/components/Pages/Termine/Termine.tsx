@@ -11,12 +11,9 @@ import {termine, termineHeader} from "../../Content/TermineContent";
 export default function Termine() {
     let current_lang = window.location.href.split("/")[3] as String;
 
-
     let rows: any;
     for (let i = 0; i < 6; i++) {
-        //@ts-ignore
         rows = termine[current_lang].map((e) => (
-            //@ts-ignore
             <tr key={e.name}>
                 <td><Center>{e.event}</Center></td>
                 <td><Center>{e.date}</Center></td>

@@ -16,7 +16,12 @@ function NewsBox(props: any) {
     return (
         <div className={"NewsBox"}>
             <div style={{ width: 400, marginLeft: 'auto', marginRight: 'auto' }}>
-                <PictureToPicture label={props.news_id[current_lang][1]} pic={props.news_id[current_lang][0]} size={"xl"} full_content={props.news_id[current_lang][3]}/>
+                <PictureToPicture
+                    label={props.news_id[current_lang][1]}
+                    pic={props.news_id[current_lang][0]}
+                    size={"xl"}
+                    full_content={<div>{props.news_id[current_lang][3]}</div>}
+                />
                 <Space h={"md"} />
                 <MyTitle content={props.news_id[current_lang][1]} />
                 <MyContent content={props.news_id[current_lang][2]} />
@@ -48,13 +53,6 @@ export default function News() {
                 >
                     <NewsBox news_id={news1} />
                     <NewsBox news_id={news2} />
-                    <NewsBox news_id={news1} />
-                    <NewsBox news_id={news2} />
-                    <NewsBox news_id={news1} />
-                    <NewsBox news_id={news2} />
-                    <NewsBox news_id={news1} />
-                    <NewsBox news_id={news2} />
-                    <NewsBox news_id={news1} />
                 </Flex>
                 <FooterBody />
                 <Language />
