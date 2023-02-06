@@ -144,18 +144,6 @@ a {
         margin: 10px;
       }
 
-      .NewsImage {
-        border-radius: 25px;
-        display: block;
-        overflow: hidden;
-        transform: scale(1);
-      }
-
-      .NewsImage:hover img {
-        cursor: pointer;
-        transform: scale(1.025);
-        transition: transform 150ms ease-in-out;
-      }
     }
   }
 
@@ -188,6 +176,10 @@ a {
 
   .Footer {
     width: 100vw;
+
+    .languageChooser {
+      z-index: 999 !important;
+    }
 
     .languageChooser:hover {
       cursor: pointer;

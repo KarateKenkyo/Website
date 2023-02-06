@@ -2,12 +2,13 @@
 import FooterBody from "../Footer/FooterBody";
 import React from "react";
 import Seperator from "../Home/Seperator";
-import {Avatar, Badge, Group, Flex, Space, Divider} from "@mantine/core";
-import PictureToPicture from "../../FloatingElement/PictureToPicture";
-import {news1, news2} from "../../Content/NewsContent";
+import {Image, Text, Button, Title, Avatar, Badge, Group, Flex, Space, Divider} from "@mantine/core";
+import TextToPage from "../../FloatingElement/TextToPage";
 import MyTitle from "../../Utils/MyTitle";
 import MyContent from "../../Utils/MyContent";
+import {news1, news2, news3} from "../../Content/NewsContent";
 import {items} from "../../Content/MenuContent";
+import {personsContent} from "../../Content/PersonsContent";
 import Language from "../Footer/Language";
 
 function NewsBox(props: any) {
@@ -41,18 +42,48 @@ function NewsBox(props: any) {
                         {props.cont1 && <Avatar src={null} alt={props.cont1} color={getColor(props.cont1)} radius="xl">{getInitials(props.cont1)}</Avatar>}
                     </Avatar.Group>
                 </div>
-                <PictureToPicture
-                    label={props.news_id[current_lang][1]}
-                    pic={props.news_id[current_lang][0]}
-                    size={"xl"}
-                    full_content={<div>{props.news_id[current_lang][3]}</div>}
+                <Image className={"NewsImage"}
+                       radius="md"
+                        src={props.news_id[current_lang][0]}
+                       alt="Hier sollte ein Bild sein ..."
+                       withPlaceholder
                 />
                 <Space h={"md"} />
                 <Group position="center">
                     <MyTitle content={props.news_id[current_lang][1]} />
                     <Badge color="gray">{props.date}</Badge>
                 </Group>
+                <Space h={"xs"} />
                 <MyContent content={props.news_id[current_lang][2]} />
+                <TextToPage
+                    className={"PersonInfoButton"}
+                    size="xl"
+                    openingText={
+                        <Button
+                            color="dark"
+                            fullWidth
+                            mt="md"
+                            radius="md"
+                        >
+                            {personsContent[current_lang][9]}
+                        </Button>
+                    }
+                    title={<Title order={1}>{props.news_id[current_lang][1]}</Title>}
+                    content={
+                        <>
+                            <Image
+                                radius="md"
+                                src={props.news_id[current_lang][0]}
+                                alt="Hier sollte ein Bild sein ..."
+                                withPlaceholder
+                            />
+                            <Space h={"xl"} />
+                            <Text c="dimmed">
+                                {props.news_id[current_lang][3]}
+                            </Text>
+                        </>
+                    } />
+                <Space h={"md"} />
             </div>
             <Divider />
             <Space h={"xl"} />
@@ -79,11 +110,23 @@ export default function News() {
                     direction="row"
                     wrap="wrap"
                 >
+
+                    <NewsBox
+                        news_id={news3}
+                        date={"15.04.2023"}
+                        cont1={"Zsolt Penderik"}
+                        cont2={"Raphaele Licciardo"}
+                        cont3={"Michael Kupper"}
+                        cont4={"Evi Gleibs"}
+                        cont5={"Monika Penderik"}
+                    />
                     <NewsBox
                         news_id={news2}
                         date={"01.04.2023"}
-                        cont1={"Raphaele Licciardo"}
-                        cont2={"Zsolt Penderik"}
+                        cont1={"Zsolt Penderik"}
+                        cont2={"Raphaele Licciardo"}
+                        cont3={"Monika Penderik"}
+                        cont4={"Maria Licciardo"}
                     />
                     <NewsBox
                         news_id={news1}
