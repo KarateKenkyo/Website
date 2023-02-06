@@ -138,6 +138,12 @@ a {
 
     .NewsBox {
 
+      .Avatar {
+        position: absolute;
+        z-index: 1;
+        margin: 10px;
+      }
+
       .NewsImage {
         border-radius: 25px;
         display: block;
