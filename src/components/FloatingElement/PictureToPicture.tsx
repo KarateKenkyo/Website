@@ -20,7 +20,7 @@ export default function PictureToPicture(props: any) {
             >
                 <ScrollArea style={{ height: 600 }}>
                     <Spoiler
-                        maxHeight={550}
+                        maxHeight={575}
                         showLabel={textToPage[current_lang][0]}
                         hideLabel={textToPage[current_lang][1]}>
                         <Image
