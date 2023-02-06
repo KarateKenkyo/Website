@@ -6,7 +6,6 @@ Die Offizielle Webseite des 'Karateverein Kenkyo Rheinzabern'
 
 ## TODO
 
-- [ ] News Content Dynamisch anhand einer Liste erstellen 
 - [ ] News Content Übersetzten 
 - [ ] Floating News Card Design
 
