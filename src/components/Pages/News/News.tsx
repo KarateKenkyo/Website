@@ -56,6 +56,15 @@ function NewsBox(props: any) {
                 <Space h={"xs"} />
                 <MyContent content={props.news_id[current_lang][2]} />
                 <TextToPage
+                    date={props.date}
+                    type={props.news_id[current_lang][4]}
+                    cont1={props.cont1}
+                    cont2={props.cont2}
+                    cont3={props.cont3}
+                    cont4={props.cont4}
+                    cont5={props.cont5}
+                    cont6={props.cont6}
+                    cont7={props.cont7}
                     className={"PersonInfoButton"}
                     size="xl"
                     openingText={
