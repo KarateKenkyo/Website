@@ -2,7 +2,6 @@
 import MyTitle from "../../Utils/MyTitle";
 import {times} from "../../Content/TrainerContent";
 import {Card, Group, Badge, Container, Space, Text} from "@mantine/core";
-import MyContent from "../../Utils/MyContent";
 import React from "react";
 
 function CourseCard(props: any) {
@@ -35,7 +34,7 @@ export default function Times() {
         <Container>
             <MyTitle content={times[current_lang][0]} />
             <Space h="xl" />
-            <MyContent content={times[current_lang][1]} />
+            {/*<MyContent content={times[current_lang][1]} />*/}
             <CourseCard
                 title={times[current_lang][2]}
                 desc={times[current_lang][3]}
