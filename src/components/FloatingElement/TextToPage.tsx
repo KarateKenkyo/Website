@@ -44,7 +44,7 @@ export default function TextToPage(props: any) {
                         </ScrollArea>
                     }
                     {props.not_scrolling && props.content}
-                    <Group>
+                    {props.cont1 && <Group>
                         <Avatar.Group spacing="sm">
                             {props.cont7 && <Avatar src={null} alt={props.cont7} color={getColor(props.cont7)} radius="xl">{getInitials(props.cont7)}</Avatar>}
                             {props.cont6 && <Avatar src={null} alt={props.cont6} color={getColor(props.cont6)} radius="xl">{getInitials(props.cont6)}</Avatar>}
@@ -54,9 +54,9 @@ export default function TextToPage(props: any) {
                             {props.cont2 && <Avatar src={null} alt={props.cont2} color={getColor(props.cont2)} radius="xl">{getInitials(props.cont2)}</Avatar>}
                             {props.cont1 && <Avatar src={null} alt={props.cont1} color={getColor(props.cont1)} radius="xl">{getInitials(props.cont1)}</Avatar>}
                         </Avatar.Group>
-                        <Badge variant="outline" color="gray">{props.date}</Badge>
-                        <Badge variant="outline" color="gragrayy">{props.type}</Badge>
-                    </Group>
+                        {props.date && <Badge variant="outline" color="gray">{props.date}</Badge>}
+                        {props.type && <Badge variant="outline" color="gragrayy">{props.type}</Badge>}
+                     </Group>}
                 </Modal>
 
                 <Group position="center">
