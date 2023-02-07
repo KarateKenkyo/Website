@@ -1,35 +1,9 @@
 // @ts-nocheck
 import MyTitle from "../../Utils/MyTitle";
 import {times} from "../../Content/TrainerContent";
-import {Card, Group, Stack, Grid, Badge, Container, Space, Text} from "@mantine/core";
+import {Stack, Grid, Container, Space} from "@mantine/core";
 import React from "react";
-
-function CourseCard(props: any) {
-    return (
-        <>
-            <Card shadow="sm" p="lg" radius="md" withBorder>
-                <Card.Section>
-                </Card.Section>
-
-                <Group position="apart" mt="md" mb="xs">
-                    <Text weight={500}>{props.title}</Text>
-                </Group>
-
-                <Text ta="left" size="sm" color="dimmed">
-                    {props.desc}
-                </Text>
-
-                <Space h="md" />
-
-                <Group>
-                    <Badge color={props.color} variant="outline"> {props.time} </Badge>
-                    <Badge color={props.color} variant="outline"> {props.day} </Badge>
-                </Group>
-            </Card>
-            <Space h="xl" />
-        </>
-    );
-}
+import Cards from "./Cards";
 
 export default function Times() {
     let current_lang = window.location.href.split("/")[3] as String;
@@ -40,7 +14,7 @@ export default function Times() {
             <Stack>
                 <Grid>
                     <Grid.Col md={6}>
-                        <CourseCard
+                        <Cards
                             title={times[current_lang][2]}
                             desc={times[current_lang][3]}
                             day={times[current_lang][4]}
@@ -49,7 +23,7 @@ export default function Times() {
                         />
                     </Grid.Col>
                     <Grid.Col md={6}>
-                        <CourseCard
+                        <Cards
                             title={times[current_lang][5]}
                             desc={times[current_lang][6]}
                             day={times[current_lang][4]}
@@ -61,7 +35,7 @@ export default function Times() {
             </Stack>
                 <Grid>
                     <Grid.Col md={6}>
-                        <CourseCard
+                        <Cards
                             title={times[current_lang][7]}
                             desc={times[current_lang][9]}
                             day={times[current_lang][8]}
@@ -70,7 +44,7 @@ export default function Times() {
                         />
                     </Grid.Col>
                     <Grid.Col md={6}>
-                        <CourseCard
+                        <Cards
                             title={times[current_lang][10]}
                             desc={times[current_lang][12]}
                             day={times[current_lang][11]}
@@ -79,7 +53,7 @@ export default function Times() {
                         />
                     </Grid.Col>
                 </Grid>
-            <CourseCard
+            <Cards
                 title={times[current_lang][13]}
                 desc={times[current_lang][14]}
                 day={times[current_lang][11]}

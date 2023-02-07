@@ -1,35 +1,11 @@
 // @ts-nocheck
 import MyTitle from "../../Utils/MyTitle";
-import {Badge, Card, Stack, Container, Grid, Group, Space, Text} from "@mantine/core";
+import {Stack, Container, Grid, Space} from "@mantine/core";
 import MyContent from "../../Utils/MyContent";
 import Kontakt from "../Footer/SubPages/Kontakt";
 import React from "react";
 import {offers} from "../../Content/TrainerContent";
-
-function TraingsCard(props: any) {
-    return (
-        <Card shadow="sm" p="lg" radius="md" withBorder>
-            <Card.Section>
-            </Card.Section>
-
-            <Group position="apart" mt="md" mb="xs">
-                <Text weight={500}>{props.title}</Text>
-            </Group>
-
-            <Text ta="left" size="sm" color="dimmed">
-                {props.desc}
-            </Text>
-
-            <Space h="md" />
-
-            <Group>
-                <Badge color={props.color} variant="outline">
-                    {props.price}
-                </Badge>
-            </Group>
-        </Card>
-    );
-}
+import Cards from "./Cards";
 
 export default function Offers() {
     let current_lang = window.location.href.split("/")[3] as String;
@@ -46,44 +22,44 @@ export default function Offers() {
             <Stack>
                 <Grid>
                     <Grid.Col md={6}>
-                        <TraingsCard
+                        <Cards
                             title={offers[current_lang][2]}
                             desc={offers[current_lang][3]}
-                            price={"65€ / 6 " + offers[current_lang][12]}
+                            time={"65€ / 6 " + offers[current_lang][12]}
                             color={"teal"}
                         />
                     </Grid.Col>
                     <Grid.Col md={6}>
-                        <TraingsCard
+                        <Cards
                             title={offers[current_lang][6]}
                             desc={offers[current_lang][7]}
-                            price={"55€ / 6 " + offers[current_lang][12]}
+                            time={"55€ / 6 " + offers[current_lang][12]}
                             color={"grape"}
                         />
                     </Grid.Col>
                 </Grid>
                 <Grid>
                     <Grid.Col md={6}>
-                        <TraingsCard
+                        <Cards
                             title={offers[current_lang][8]}
                             desc={offers[current_lang][9]}
-                            price={"45€ / 6 " + offers[current_lang][12]}
+                            time={"45€ / 6 " + offers[current_lang][12]}
                             color={"orange"}
                         />
                     </Grid.Col>
                     <Grid.Col md={6}>
-                        <TraingsCard
+                        <Cards
                             title={offers[current_lang][4]}
                             desc={offers[current_lang][5]}
-                            price={"35€ / 6 " + offers[current_lang][12]}
+                            time={"35€ / 6 " + offers[current_lang][12]}
                             color={"yellow"}
                         />
                     </Grid.Col>
                 </Grid>
-                <TraingsCard
+                <Cards
                     title={offers[current_lang][10]}
                     desc={offers[current_lang][11]}
-                    price={"30€ / 3 " + offers[current_lang][12]}
+                    time={"30€ / 3 " + offers[current_lang][12]}
                     color={"pink"}
                 />
             </Stack>
