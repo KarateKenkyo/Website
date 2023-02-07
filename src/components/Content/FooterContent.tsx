@@ -14,7 +14,7 @@ export const footer = {
         "Geschichte",
         "Anmeldeformular",
         "Kündigungsvorlage",
-        "Datenschutzsformular",
+        "Datenschutzformular",
         "Prüfungsordnung",
         "Downloads",
         "Wettkampfregeln",
