@@ -9,6 +9,8 @@ Die Offizielle Webseite des 'Karateverein Kenkyo Rheinzabern'
 - [ ] Kündigungsvorlage PDF
 - [ ] Datenschutzformular PDF
 
+- [ ] SEO
+
 - [ ] Kata, Bunkai, SV, ... Videos aufnehmen
 
 - [ ] Kurzmitgliedschaften Subdomain Page
