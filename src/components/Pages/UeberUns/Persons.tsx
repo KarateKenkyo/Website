@@ -199,7 +199,6 @@ export default function Persons() {
                     color={"#6D4326"}
                     grade={"1. Kyu"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][7] + ", " + personsContent[current_lang][5]}
-
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-4.jpeg"}
                     champion={true}
                     fulltext={"TODO"}
@@ -220,13 +219,13 @@ export default function Persons() {
                     color={"#6D4326"}
                     grade={"1. Kyu"}
                     position={personsContent[current_lang][1]}
-                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/darja.jpg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-3.jpeg"}
                     fulltext="TODO"
                 />
                 <MyCard
                     title={"Maria Licciardo + Nala 🐾"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][8]}
-                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/mama3.jpg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/mama1.jpg"}
                     fulltext="TODO"
                 />
             </Flex>
