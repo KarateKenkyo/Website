@@ -1,6 +1,6 @@
 // @ts-nocheck
-import {Flex, Stack, Text, Title} from "@mantine/core";
-import React from "react";
+import {Divider, Flex, Stack, Text, Title} from "@mantine/core";
+import React, {useState, useEffect} from "react";
 import {footer} from "../../Content/FooterContent";
 import Copyright from "./Copyright";
 import Verbaende from "./SubPages/Verbaende";
@@ -16,9 +16,25 @@ import Kontakt from "./SubPages/Kontakt";
 import History from "./SubPages/History/History";
 import Rules from "./SubPages/Rules";
 import FAQ from "./SubPages/FAQ";
+import Anmeldeformular from "./SubPages/Anmeldeformular";
+import Kuendigungsvorlage from "./SubPages/Kuendigungsvorlage";
 
 export default function FooterBody() {
     let current_lang = window.location.href.split("/")[3] as String;
+    const [width, setWidth] = useState<number>(window.innerWidth);
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+
+    const isMobile = width <= 768;
 
     return (
         <div className={"Footer"}>
@@ -32,12 +48,7 @@ export default function FooterBody() {
                 direction="row"
                 wrap="wrap"
             >
-                <Stack>
-                    <Title order={4}>{footer[current_lang][1]}</Title>
-                    <Imprint />
-                    <Privacy />
-                    <Kontakt />
-                </Stack>
+                {!isMobile && <Divider orientation="vertical" /> }
                 <Stack>
                     <Title order={4}>{footer[current_lang][5]}</Title>
 
@@ -61,6 +72,14 @@ export default function FooterBody() {
                         </Stack>
                     </Flex>
                 </Stack>
+                {!isMobile && <Divider orientation="vertical" /> }
+                <Stack>
+                    <Title order={4}>{footer[current_lang][1]}</Title>
+                    <Imprint />
+                    <Privacy />
+                    <Kontakt />
+                </Stack>
+                {!isMobile && <Divider orientation="vertical" /> }
                 <Stack>
                     <Title order={4}>{footer[current_lang][16]}</Title>
                     <Flex
@@ -72,8 +91,8 @@ export default function FooterBody() {
                         wrap="wrap"
                     >
                         <Stack>
-                            <Text c={"dimmed"}>{footer[current_lang][12]}</Text>
-                            <Text c={"dimmed"}>{footer[current_lang][13]}</Text>
+                            <Anmeldeformular title={footer[current_lang][12]} />
+                            <Kuendigungsvorlage title={footer[current_lang][13]} />
                             <Text c={"dimmed"}>{footer[current_lang][14]}</Text>
                         </Stack>
                         <Stack>
@@ -83,6 +102,7 @@ export default function FooterBody() {
                         </Stack>
                     </Flex>
                 </Stack>
+                {!isMobile && <Divider orientation="vertical" /> }
             </Flex>
             <Copyright />
         </div>

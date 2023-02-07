@@ -94,13 +94,11 @@ export default function FAQ(props: any) {
                     text="Ein Gasttraining läuft zunächst wie jedes andere Training ab. Vor- und Nach dem Training hast du die Möglichkeit dich mit den anderen Mitglieder zu unterhalten. Selbstverständlich beraten wir dich anschließend. Vergisst das Trinken und Sportklamotten nicht :"
                 />
 
-
                 <AccordionCard
                     id="question6"
                     title="Was ist eine Kurzmitgliedschaft?"
                     text="Bei einer Kurzmitgliedschaft zahlt ihr einmalig einen Beitrag, damit seit Ihr für 3 Monate Mitglied unseres Vereins und dürft am Training teilnehmen. Nach den 3 Monaten könnt ihr dieses Angebot nicht nocheinmal buchen, falls ihr also Interesse an dem Karateverein Kenkyo habt, meldet euch gerne mit einer Vollen Mitgliedschaft an."
                 />
-
 
                 <AccordionCard
                     id="question9"
