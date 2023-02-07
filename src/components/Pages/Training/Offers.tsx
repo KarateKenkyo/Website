@@ -73,7 +73,7 @@ export default function Offers() {
                 <TraingsCard
                     title={offers[current_lang][10]}
                     desc={offers[current_lang][11]}
-                    price={"20€ / 3 " + offers[current_lang][12]}
+                    price={"30€ / 3 " + offers[current_lang][12]}
                     color={"pink"}
                 />
             </Flex>
