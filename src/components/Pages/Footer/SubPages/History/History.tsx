@@ -3,7 +3,7 @@ import React from "react";
 import {Container, Title} from "@mantine/core";
 import MyTimeline from "./MyTimeline";
 import IntroGojuRyu from "./IntroGojuRyu";
-import IntroKenkyo from "./IntroKenkyo";
+//import IntroKenkyo from "./IntroKenkyo";
 import {footer} from "../../../../Content/FooterContent";
 import TextToPage from "../../../../FloatingElement/TextToPage";
 
@@ -19,7 +19,7 @@ export default function History() {
                 <Container>
                     <IntroGojuRyu />
                     <MyTimeline />
-                    <IntroKenkyo />
+                    {/*<IntroKenkyo />*/}
                 </Container>
             }/>
     );
