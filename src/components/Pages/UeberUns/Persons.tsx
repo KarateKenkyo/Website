@@ -210,7 +210,7 @@ export default function Persons() {
                     color={"dark"}
                     grade={"1. Dan"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][5]}
-                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-7.jpeg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/monika.jpg"}
                     champion={true}
                     fulltext={personsContent[current_lang][11]}
                     succ1={zsoltContent[current_lang][0]}
@@ -220,14 +220,13 @@ export default function Persons() {
                     color={"#6D4326"}
                     grade={"1. Kyu"}
                     position={personsContent[current_lang][1]}
-                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-9.jpeg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/darja.jpg"}
                     fulltext="TODO"
                 />
                 <MyCard
-                    title={"Maria Licciardo"}
-                    color={"grape"}
+                    title={"Maria Licciardo + Nala 🐾"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][8]}
-                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-3.jpeg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/mama3.jpg"}
                     fulltext="TODO"
                 />
             </Flex>
