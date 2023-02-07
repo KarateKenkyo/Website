@@ -59,15 +59,17 @@ export default function TextToPage(props: any) {
                      </Group>}
                 </Modal>
 
-                <Group position="center">
-                    <Text
-                        c={props.color}
-                        className={"Button"}
-                        onClick={() => {setOpened(true);}}
-                    >
-                        {props.openingText}
-                    </Text>
-                </Group>
+                {props.showButton &&
+                    <Group position="center">
+                        <Text
+                            c={props.color}
+                            className={"Button"}
+                            onClick={() => {setOpened(true);}}
+                        >
+                            {props.openingText}
+                        </Text>
+                    </Group>
+                }
             </Container>
         </div>
     );

@@ -144,28 +144,33 @@ export const raphaeleContent = {
 
 export const zsoltContent = {
     "de": [
-        "Karate Kampfrichterausbildung",
+        "Kampfrichter",
         "C-Trainer",
         "B-Prüfer",
+        "Ausbildung"
     ],
     "en": [
-        "Karate Referee Training",
+        "Karate Referee",
         "C-Trainer",
         "B-Examiner",
+        "Training"
     ],
     "ja": [
-        '空手審判員養成講座 "を開催します',
+        'レフェリー',
         "Cトレーナー",
-        "B審査員",
+        "審査員",
+        "トレーニング",
     ],
     "un": [
-        "Karate bíróképzés",
+        "Bírók",
         "C tréner",
         "B vizsgáztató",
+        "Képzés",
     ],
     "uk": [
-        "Підготовка суддів з карате",
+        "Судді",
         "Тренер С",
         "Б-екзаменатор",
+        "Навчання",
     ]
 }

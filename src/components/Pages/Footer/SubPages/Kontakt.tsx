@@ -9,6 +9,7 @@ export default function Kontakt(props: any) {
     let current_lang = window.location.href.split("/")[3] as String;
     return (
         <TextToPage
+            showButton={true}
             openingText={
                 <>
                     {props.button && (

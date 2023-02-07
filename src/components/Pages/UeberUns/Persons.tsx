@@ -62,17 +62,10 @@ function MyCard(props: any) {
                     <Text ta="left" c="dimmed">{props.succ2}</Text>
                     <Text ta="left" c="dimmed">{props.succ3}</Text>
                     <Text ta="left" c="dimmed">{props.succ4}</Text>
+                    <Text ta="left" c="dimmed">{props.succ5}</Text>
                     <Space h="md" />
                     <Divider />
                 </>
-            )}
-
-            {props.quote && props.quoteOriginDifferent && (
-                <Blockquote cite={"~ " + props.quoteOrigin}>
-                    <Text ta="left" size="lg" color="dimmed">
-                        {props.quote}
-                    </Text>
-                </Blockquote>
             )}
 
             {props.quote && !props.quoteOriginDifferent && (
@@ -85,6 +78,7 @@ function MyCard(props: any) {
 
             <TextToPage
                 className={"PersonInfoButton"}
+                showButton={props.show}
                 size="xl"
                 openingText={
                     <Button
@@ -152,13 +146,14 @@ export default function Persons() {
                     grade={"5. Dan"}
                     position={personsContent[current_lang][0] + ", " + personsContent[current_lang][2] + ", " + personsContent[current_lang][3]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Zsolt.jpg"}
-                    champion={true}
+                        champion={true}
                     fulltext="TODO"
                     succ1={zsoltContent[current_lang][0]}
                     succ2={zsoltContent[current_lang][1]}
                     succ3={zsoltContent[current_lang][2]}
                 />
                 <MyCard
+                    show={true}
                     title={"Raphaele Salvatore  Licciardo"}
                     color={"dark"}
                     grade={"1. Dan"}
@@ -172,7 +167,8 @@ export default function Persons() {
                     succ1={raphaeleContent[current_lang][2]}
                     succ2={raphaeleContent[current_lang][3]}
                     succ3={raphaeleContent[current_lang][4]}
-                    succ4={raphaeleContent[current_lang][5]}
+                    succ4={zsoltContent[current_lang][0]}
+                    succ5={zsoltContent[current_lang][1] + " " + zsoltContent[current_lang][3]}
                 />
             </Flex>
 
@@ -190,19 +186,23 @@ export default function Persons() {
                     title={"Michael Kupper"}
                     color={"dark"}
                     grade={"1. Dan"}
-                    position={personsContent[current_lang][0] + ", " + personsContent[current_lang][6] + ", " + personsContent[current_lang][4]}
+                    position={personsContent[current_lang][0] + ", " + personsContent[current_lang][6]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-2.jpeg"}
                     champion={true}
                     fulltext="TODO"
                     succ1={zsoltContent[current_lang][0]}
+                    succ2={zsoltContent[current_lang][1]}
                 />
                 <MyCard
                     title={"Dr. Evi Gleibs"}
                     color={"#6D4326"}
                     grade={"1. Kyu"}
-                    position={personsContent[current_lang][1] + ", " + personsContent[current_lang][7]}
+                    position={personsContent[current_lang][1] + ", " + personsContent[current_lang][7] + ", " + personsContent[current_lang][5]}
+
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-4.jpeg"}
+                    champion={true}
                     fulltext={"TODO"}
+                    succ1={zsoltContent[current_lang][1] + " " + zsoltContent[current_lang][3]}
                 />
                 <MyCard
                     title={"Monika Penderik"}

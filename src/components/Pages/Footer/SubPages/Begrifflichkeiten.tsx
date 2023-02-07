@@ -58,34 +58,35 @@ export default function Begrifflichkeiten() {
             size="xl"
             openingText={footer[current_lang][9]}
             title={<Title order={1}>{footer[current_lang][9]}</Title>}
+            showButton={true}
             content={
-        <Container>
-            <Title order={1}>{begrifflichkeiten[current_lang][0]}</Title>
-            <Space h={"xs"} />
-            <MyContent content={begrifflichkeiten[current_lang][1]} />
-            <Table highlightOnHover>
-                <thead>
-                <tr>
-                    <th>Karate</th>
-                    <th>{current_lang}</th>
-                    {/*<th>Hinweiß</th>*/}
-                </tr>
-                </thead>
-                <tbody>{grusformelRow}</tbody>
-            </Table>
-            <Space h={"xs"} />
-            <MyContent content={begrifflichkeiten[current_lang][2]} />
-            <Table highlightOnHover>
-                <thead>
-                <tr>
-                    <th>Karate</th>
-                    <th>{current_lang}</th>
-                    {/*<th>Aussprache</th>*/}
-                </tr>
-                </thead>
-                <tbody>{zahlenRow}</tbody>
-            </Table>
-        </Container>
+                <Container>
+                    <Title order={1}>{begrifflichkeiten[current_lang][0]}</Title>
+                    <Space h={"xs"} />
+                    <MyContent content={begrifflichkeiten[current_lang][1]} />
+                    <Table highlightOnHover>
+                        <thead>
+                        <tr>
+                            <th>Karate</th>
+                            <th>{current_lang}</th>
+                            {/*<th>Hinweiß</th>*/}
+                        </tr>
+                        </thead>
+                        <tbody>{grusformelRow}</tbody>
+                    </Table>
+                    <Space h={"xs"} />
+                    <MyContent content={begrifflichkeiten[current_lang][2]} />
+                    <Table highlightOnHover>
+                        <thead>
+                        <tr>
+                            <th>Karate</th>
+                            <th>{current_lang}</th>
+                            {/*<th>Aussprache</th>*/}
+                        </tr>
+                        </thead>
+                        <tbody>{zahlenRow}</tbody>
+                    </Table>
+                </Container>
             }/>
     );
 }

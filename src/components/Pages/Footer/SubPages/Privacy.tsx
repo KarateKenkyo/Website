@@ -12,6 +12,7 @@ export default function Privacy() {
     return(
         <TextToPage
             size="xl"
+            showButton={true}
             openingText={footer[current_lang][3]}
             title={<Title order={1}>{footer[current_lang][3]}</Title>}
             content={

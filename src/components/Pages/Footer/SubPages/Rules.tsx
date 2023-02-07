@@ -11,6 +11,7 @@ export default function Rules() {
     return (
         <TextToPage
             size="xl"
+            showButton={true}
             openingText={verhalten[current_lang][0]}
             title={<Title order={1}>{verhalten[current_lang][0]}</Title>}
             content={

@@ -9,6 +9,7 @@ export default function Verbaende() {
 
     return (
         <TextToPage
+            showButton={true}
             size="xl"
             not_scrolling={true}
             openingText={footer[current_lang][6]}

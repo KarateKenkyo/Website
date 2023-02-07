@@ -31,6 +31,7 @@ function NewsBox(props: any) {
                 <Space h={"xs"} />
                 <MyContent content={props.news_id[current_lang][2]} />
                 <TextToPage
+                    showButton={true}
                     date={props.date}
                     type={props.news_id[current_lang][4]}
                     cont1={props.cont1}

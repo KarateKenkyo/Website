@@ -10,6 +10,7 @@ export default function Sponsoren() {
     return (
         <TextToPage
             size="xl"
+            showButton={true}
             not_scrolling={true}
             openingText={footer[current_lang][7]}
             title={<Title order={1}>{footer[current_lang][7]}</Title>}

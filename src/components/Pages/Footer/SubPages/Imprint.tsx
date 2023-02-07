@@ -11,6 +11,7 @@ export default function Imprint() {
 
     return(<TextToPage
                 size="xl"
+                showButton={true}
                 openingText={footer[current_lang][2]}
                 title={<Title order={1}>{footer[current_lang][2]}</Title>}
                 content={

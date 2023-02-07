@@ -41,7 +41,7 @@ export const times = {
         "Altersvorsorge Training",
         "Samstag",
         "Für unsere Älteren Karateka bieten wir auch ein angepasstes Training an. Auch jüngere Teilnehmen mit Verletztungen haben hier schon dran teilgenommen.",
-        "Speziell Training",
+        "Spezial Training",
         "Bei wichtigen Veranstaltungen bieten wir ein gesondertes Speziall Training an. Dafür können bei anstehenden Wettkämpfen oder Kyu- / Danprüfungen nochmal die Feinheiten ausgebessert werden." ,
     ],
     "en": [
@@ -127,7 +127,7 @@ export const offers = {
         "Unser Kinderangebot",
         "Auch unsere Kinder werden im Vergleich zu einer Normalen Mitgliedschaft begünstigt, mit 45€ jedes Halbe Jahr erhalten Sie eine günstigere Normale Mitgliedschaft. Dies beinhaltet die Teilnahme an allen Trainingseinheiten welche von uns bereit gestellt werden. Dies kannst du als Volljährige Person erwerben, es kann Monatlich gekündigt werden, ansonsten wird deine Mitgliedschaft automatisch verlängert.",
         "Kurzzeitmitgliedschaft",
-        "Als einer der wenigen Kampfsport Verein / Schulen bietet Kenkyo erstmals Kurzzeitmitgliedschaften an. Für einmalig 30€ kannst du innerhalb 3 Monate so oft Trainieren kommen wie du möchtest. Danach wirst du automatisch gekündigt und kannst keine weitere Kurzzeitmitgliedschaft buchen. Hast du also weiterhin Interesse, stehen die obige Angebote offen.",
+        "Als einer der wenigen Kampfsport Verein / Schulen bietet Kenkyo erstmals Kurzzeitmitgliedschaften an. Für einmalig 20€ kannst du innerhalb 3 Monate so oft Trainieren kommen wie du möchtest. Danach wirst du automatisch gekündigt und kannst keine weitere Kurzzeitmitgliedschaft buchen. Hast du also weiterhin Interesse, stehen die obige Angebote offen.",
         "Monate",
         "Zu den unten genannten Kosten, kommen ebenfalls 20€ Verwaltungsaufwand.",
     ],
@@ -143,7 +143,7 @@ export const offers = {
         "Our children's offer",
         "Also our children are favored compared to a normal membership, with 45€ every half year you get a cheaper normal membership. This includes the participation in all training sessions which are provided by us. You can purchase this as an adult person, it can be cancelled monthly, otherwise your membership will be automatically renewed.",
         "Short Term Membership",
-        "As one of the few martial arts club / schools Kenkyo offers for the first time short-term memberships. For a one-time fee of 30€ you can come as often as you want to train within 3 months. After that, you will be automatically canceled and can not book another short-term membership. So if you are still interested, the above offers are open.",
+        "As one of the few martial arts club / schools Kenkyo offers for the first time short-term memberships. For a one-time fee of 20€ you can come as often as you want to train within 3 months. After that, you will be automatically canceled and can not book another short-term membership. So if you are still interested, the above offers are open.",
         "months",
         "In addition to the costs mentioned below, there is also an administrative cost of 20€.",
     ],
@@ -159,7 +159,7 @@ export const offers = {
         "私たちの子どもたちの提案",
         "「また、子どもたちには、半年ごとに45ユーロを支払うことで、通常の会員より安く利用できる特典もあります。これには、当社が提供するすべてのトレーニングへの参加も含まれます。大人で購入すると、毎月解約でき、それ以外は自動更新されます。",
         '短期会員 "であること。',
-        '数少ない武道クラブ／スクール "である建協が、初めて短期会員制を導入。1回30€で、3ヶ月間何度でもトレーニングができます。それ以降は自動的にキャンセルとなり、再度短期会員を予約することはできません。だから、もしあなたがまだ興味を持っているならば、上記のオファーはあなたに開かれたものです」。',
+        '数少ない武道クラブ／スクール "である建協が、初めて短期会員制を導入。1回20€で、3ヶ月間何度でもトレーニングができます。それ以降は自動的にキャンセルとなり、再度短期会員を予約することはできません。だから、もしあなたがまだ興味を持っているならば、上記のオファーはあなたに開かれたものです」。',
         "月 ",
         "後述の費用に加えて、事務手数料として20ユーロがかかります。"
 
@@ -176,7 +176,7 @@ export const offers = {
         "Gyermekeink ajánlata",
         "Gyermekeinknek is különleges ajánlatot kínálunk a normál tagsághoz képest, félévente 45€-val olcsóbban kapnak normál tagságot. Ez magában foglalja az általunk biztosított valamennyi képzésen való részvételt. Ezt felnőttként is megvásárolhatod, havonta lemondható, egyébként a tagságod automatikusan megújul",
         "Rövid távú tagság",
-        "A Kenkyo azon kevés harcművészeti klubok/iskolák egyikeként először kínál rövid távú tagságot. Egyszeri 30€-ért 3 hónapon belül annyiszor edzhetsz, ahányszor csak szeretnél. Ezt követően automatikusan törlésre kerül, és nem foglalhat újabb rövid távú tagságot. Tehát ha még mindig érdekel, a fenti ajánlatok nyitva állnak számodra.",
+        "A Kenkyo azon kevés harcművészeti klubok/iskolák egyikeként először kínál rövid távú tagságot. Egyszeri 20€-ért 3 hónapon belül annyiszor edzhetsz, ahányszor csak szeretnél. Ezt követően automatikusan törlésre kerül, és nem foglalhat újabb rövid távú tagságot. Tehát ha még mindig érdekel, a fenti ajánlatok nyitva állnak számodra.",
         "hónapok",
         "Az alább említett költségeken kívül 20 euró adminisztrációs költség is felmerül.",
     ],
@@ -191,7 +191,7 @@ export const offers = {
         "Пропозиція наших дітей",
         "Нашим дітям також пропонується спеціальний тариф у порівнянні зі звичайним абонементом: за 45 євро кожні півроку ви отримуєте дешевший звичайний абонемент. Це включає участь у всіх тренінгах, які ми проводимо. Ви можете придбати його як дорослий, його можна скасовувати щомісяця, інакше ваше членство буде автоматично поновлене",
         "Короткострокове членство",
-        "Як один з небагатьох клубів/шкіл бойових мистецтв, Кенкьо вперше пропонує короткострокове членство. За одноразовий внесок у розмірі 30 євро ви можете тренуватися скільки завгодно протягом 3 місяців. Після цього ваше членство буде автоматично анульовано, і ви не зможете забронювати наступне короткострокове членство. Тож якщо ви все ще зацікавлені, вищезгадані пропозиції відкриті для вас",
+        "Як один з небагатьох клубів/шкіл бойових мистецтв, Кенкьо вперше пропонує короткострокове членство. За одноразовий внесок у розмірі 20 євро ви можете тренуватися скільки завгодно протягом 3 місяців. Після цього ваше членство буде автоматично анульовано, і ви не зможете забронювати наступне короткострокове членство. Тож якщо ви все ще зацікавлені, вищезгадані пропозиції відкриті для вас",
         "Місяці",
         "На додаток до витрат, згаданих нижче, існує також адміністративний збір у розмірі 20 євро",
     ]

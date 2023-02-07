@@ -11,15 +11,16 @@ export default function History() {
     let current_lang = window.location.href.split("/")[3] as String;
     return(
         <TextToPage
+            showButton={true}
             size="xl"
             openingText={footer[current_lang][11]}
             title={<Title order={1}>{footer[current_lang][11]}</Title>}
             content={
-        <Container>
-            <IntroGojuRyu />
-            <MyTimeline />
-            <IntroKenkyo />
-        </Container>
+                <Container>
+                    <IntroGojuRyu />
+                    <MyTimeline />
+                    <IntroKenkyo />
+                </Container>
             }/>
     );
 }
