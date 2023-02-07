@@ -22,8 +22,8 @@ function CourseCard(props: any) {
                 <Space h="md" />
 
                 <Group>
-                    <Badge color={props.color} variant="outline"> {props.day} </Badge>
                     <Badge color={props.color} variant="outline"> {props.time} </Badge>
+                    <Badge color={props.color} variant="outline"> {props.day} </Badge>
                 </Group>
             </Card>
             <Space h="xl" />
@@ -37,7 +37,6 @@ export default function Times() {
         <Container>
             <MyTitle content={times[current_lang][0]} />
             <Space h="xl" />
-            {/*<MyContent content={times[current_lang][1]} />*/}
             <Stack>
                 <Grid>
                     <Grid.Col md={6}>
