@@ -1,6 +1,6 @@
 // @ts-nocheck
 import MyTitle from "../../Utils/MyTitle";
-import {Badge, Card, Container, Flex, Group, Space, Text} from "@mantine/core";
+import {Badge, Card, Stack, Container, Grid, Group, Space, Text} from "@mantine/core";
 import MyContent from "../../Utils/MyContent";
 import Kontakt from "../Footer/SubPages/Kontakt";
 import React from "react";
@@ -14,14 +14,19 @@ function TraingsCard(props: any) {
 
             <Group position="apart" mt="md" mb="xs">
                 <Text weight={500}>{props.title}</Text>
-                <Badge color={props.color} variant="outline">
-                    {props.price}
-                </Badge>
             </Group>
 
             <Text ta="left" size="sm" color="dimmed">
                 {props.desc}
             </Text>
+
+            <Space h="md" />
+
+            <Group>
+                <Badge color={props.color} variant="outline">
+                    {props.price}
+                </Badge>
+            </Group>
         </Card>
     );
 }
@@ -38,45 +43,50 @@ export default function Offers() {
             <MyContent content={offers[current_lang][13]} />
             <Space h="xl" />
 
-            <Flex
-                mih={50}
-                gap="md"
-                justify="center"
-                align="flex-start"
-                direction="row"
-                wrap="wrap"
-            >
-                <TraingsCard
-                    title={offers[current_lang][2]}
-                    desc={offers[current_lang][3]}
-                    price={"65€ / 6 " + offers[current_lang][12]}
-                    color={"teal"}
-                />
-                <TraingsCard
-                    title={offers[current_lang][4]}
-                    desc={offers[current_lang][5]}
-                    price={"35€ / 6 " + offers[current_lang][12]}
-                    color={"yellow"}
-                />
-                <TraingsCard
-                    title={offers[current_lang][6]}
-                    desc={offers[current_lang][7]}
-                    price={"55€ / 6 " + offers[current_lang][12]}
-                    color={"grape"}
-                />
-                <TraingsCard
-                    title={offers[current_lang][8]}
-                    desc={offers[current_lang][9]}
-                    price={"45€ / 6 " + offers[current_lang][12]}
-                    color={"orange"}
-                />
+            <Stack>
+                <Grid>
+                    <Grid.Col md={6}>
+                        <TraingsCard
+                            title={offers[current_lang][2]}
+                            desc={offers[current_lang][3]}
+                            price={"65€ / 6 " + offers[current_lang][12]}
+                            color={"teal"}
+                        />
+                    </Grid.Col>
+                    <Grid.Col md={6}>
+                        <TraingsCard
+                            title={offers[current_lang][6]}
+                            desc={offers[current_lang][7]}
+                            price={"55€ / 6 " + offers[current_lang][12]}
+                            color={"grape"}
+                        />
+                    </Grid.Col>
+                </Grid>
+                <Grid>
+                    <Grid.Col md={6}>
+                        <TraingsCard
+                            title={offers[current_lang][8]}
+                            desc={offers[current_lang][9]}
+                            price={"45€ / 6 " + offers[current_lang][12]}
+                            color={"orange"}
+                        />
+                    </Grid.Col>
+                    <Grid.Col md={6}>
+                        <TraingsCard
+                            title={offers[current_lang][4]}
+                            desc={offers[current_lang][5]}
+                            price={"35€ / 6 " + offers[current_lang][12]}
+                            color={"yellow"}
+                        />
+                    </Grid.Col>
+                </Grid>
                 <TraingsCard
                     title={offers[current_lang][10]}
                     desc={offers[current_lang][11]}
                     price={"30€ / 3 " + offers[current_lang][12]}
                     color={"pink"}
                 />
-            </Flex>
+            </Stack>
         </Container>
     );
 }
