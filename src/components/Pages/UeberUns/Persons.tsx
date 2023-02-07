@@ -103,6 +103,7 @@ function MyCard(props: any) {
                                 <Text ta="left">{props.succ3}</Text>
                                 <Seperator />
                                 <Text ta="left">{props.succ4}</Text>
+                                <Text ta="left">{props.succ5}</Text>
                                 <Seperator />
 
                                 {props.quote && props.quoteOriginDifferent && (
