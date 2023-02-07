@@ -95,7 +95,7 @@ export default function myTimeline() {
                                    pic={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Gogen_Yamaguchi.jpeg"} />
                 }
             >
-                <Text color="dimmed" size="sm">{timeline[current_lang][7]}</Text>
+                <Text color="dimmed" size="sm">{timeline[current_lang][8]}</Text>
                 <Text size="xs" mt={4}> 1909 - 1989 </Text>
             </Timeline.Item>
 
@@ -106,7 +106,7 @@ export default function myTimeline() {
                                    pic={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Yuishinkan-2.png"} />
                 }
             >
-                <Text color="dimmed" size="sm">{timeline[current_lang][8]}</Text>
+                <Text color="dimmed" size="sm">{timeline[current_lang][9]}</Text>
                 <Text size="xs" mt={4}> 1954 - 2020 </Text>
             </Timeline.Item>
 
@@ -116,7 +116,7 @@ export default function myTimeline() {
                                    pic={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Logo.png"} />
                 }
             >
-                <Text color="dimmed" size="sm">{timeline[current_lang][9]}</Text>
+                <Text color="dimmed" size="sm">{timeline[current_lang][10]}</Text>
                 <Text size="xs" mt={4}> 2023 </Text>
             </Timeline.Item>
         </Timeline>
