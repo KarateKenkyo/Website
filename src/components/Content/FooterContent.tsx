@@ -114,10 +114,10 @@ export const footer = {
 export const imprint = {
     "de": [
         "Angaben gemäß § 5 TMG:",
-        "Adresse TODO",
+        "Rappengasse 32, 76764 Rheinzabern",
 
         "Vertreten durch",
-        "Vorsitzender",
+        "Vorsitzender Zsolt Penderik, Rappengasse 32, 76764 Rheinzabern",
 
         "Kontakt",
         "E-Mail: TODO",
@@ -142,10 +142,10 @@ export const imprint = {
     ],
     "en": [
         "Details according to § 5 TMG:",
-        "Address TODO",
+        "Rappengasse 32, 76764 Rheinzabern",
 
         "Represented by",
-        "Chairman",
+        "Zsolt Penderik, Rappengasse 32, 76764 Rheinzabern",
 
         "Contact",
         "E-mail: TODO",
@@ -171,10 +171,10 @@ export const imprint = {
     "ja": [
 
         "§5 TMG:による詳細",
-        "アドレスTODO ",
+        "Rappengasse 32, 76764 Rheinzabern",
 
         '代表者 "である',
-        'チェアマン "です',
+        "Zsolt Penderik, Rappengasse 32, 76764 Rheinzabern",
 
         '連絡先 "です',
         'Eメール "です。TODO」です',
@@ -200,10 +200,10 @@ export const imprint = {
     ],
     "un": [
         "Részletek a TMG 5. §-a szerint:",
-        "Cím TODO",
+        "Rappengasse 32, 76764 Rheinzabern",
 
         "Képviseli",
-        "Elnök",
+        "Zsolt Penderik, Rappengasse 32, 76764 Rheinzabern",
 
         "Kapcsolat",
         "E-mail: TODO",
@@ -229,10 +229,10 @@ export const imprint = {
     ],
     "uk": [
         "Деталі відповідно до § 5 TMG:",
-        "Звернися сьогодні",
+        "Rappengasse 32, 76764 Rheinzabern",
 
         "Представлений",
-        "Голова",
+        "Zsolt Penderik, Rappengasse 32, 76764 Rheinzabern",
 
         "Контакт",
         "Електронна пошта: ",
