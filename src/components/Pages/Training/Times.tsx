@@ -37,37 +37,37 @@ export default function Times() {
             <Space h="xl" />
             <MyContent content={times[current_lang][1]} />
             <CourseCard
-                title={"Kinder- und Anfänger Training"}
-                desc={"Das Kindertraining findet jeden Dienstag und Donnerstag von 18:00 bis 19:00 Uhr statt. Auch Erwachsene Anfänger können daran teilnehmen."}
-                day={"Dienstag & Donnerstag"}
+                title={times[current_lang][2]}
+                desc={times[current_lang][3]}
+                day={times[current_lang][4]}
                 time={"18:00 - 19:00"}
                 color={"teal"}
             />
             <CourseCard
-                title={"Erwachsenen- und Fortgeschrittenen Training"}
-                desc={"Das Kindertraining findet jeden Dienstag und Donnerstag von 18:00 bis 19:00 Uhr statt. Auch Erwachsene Anfänger können daran teilnehmen."}
-                day={"Dienstag & Donnerstag"}
+                title={times[current_lang][5]}
+                desc={times[current_lang][6]}
+                day={times[current_lang][4]}
                 time={"19:00 - 21:00"}
                 color={"orange"}
             />
             <CourseCard
-                title={"Schwarzgurt Training"}
-                desc={"Für unsere Schwarzgurte bieten wir ein gesondertes Spezieltraining an."}
-                day={"Freitag"}
+                title={times[current_lang][7]}
+                desc={times[current_lang][9]}
+                day={times[current_lang][8]}
                 time={"18:30 - 20:30"}
                 color={"dark"}
             />
             <CourseCard
-                title={"Altersvorsorge Training"}
-                desc={"Für unsere Älteren Karateka bieten wir auch ein angepasstes Training an. Auch jüngere Teilnehmen mit Verletztungen haben hier schon dran teilgenommen."}
-                day={"Samstag"}
+                title={times[current_lang][10]}
+                desc={times[current_lang][12]}
+                day={times[current_lang][11]}
                 time={"08:00 - 12:00"}
                 color={"grape"}
             />
             <CourseCard
-                title={"Speziall Training"}
-                desc={"Bei wichtigen Veranstaltungen bieten wir ein gesondertes Speziall Training an. Dafür können bei anstehenden Wettkämpfen oder Kyu- / Danprüfungen nochmal die Feinheiten ausgebessert werden."}
-                day={"Samstag"}
+                title={times[current_lang][13]}
+                desc={times[current_lang][14]}
+                day={times[current_lang][11]}
                 time={"08:00 - 12:00"}
                 color={"red"}
             />

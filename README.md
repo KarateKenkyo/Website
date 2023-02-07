@@ -6,7 +6,6 @@ Die Offizielle Webseite des 'Karateverein Kenkyo Rheinzabern'
 
 ## TODO
 
-- [ ] Courses Übersetzten 
 - [ ] News Content Übersetzten 
 - [ ] News Content Blogeinträge schreiben 
 
