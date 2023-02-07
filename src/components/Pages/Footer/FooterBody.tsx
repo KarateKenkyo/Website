@@ -15,6 +15,7 @@ import Wettkampfregeln from "./SubPages/Wettkampfregeln";
 import Kontakt from "./SubPages/Kontakt";
 import History from "./SubPages/History/History";
 import Rules from "./SubPages/Rules";
+import FAQ from "./SubPages/FAQ";
 
 export default function FooterBody() {
     let current_lang = window.location.href.split("/")[3] as String;
@@ -56,6 +57,7 @@ export default function FooterBody() {
                         <Stack>
                             <Verbaende />
                             <Sponsoren />
+                            <FAQ />
                         </Stack>
                     </Flex>
                 </Stack>
