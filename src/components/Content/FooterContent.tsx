@@ -19,7 +19,7 @@ export const footer = {
         "Downloads",
         "Wettkampfregeln",
         "Rund ums Training",
-
+        "Kursangebot"
     ],
     "en": [
         "Language Selection",
@@ -41,6 +41,7 @@ export const footer = {
         "Downloads",
         "Competition Rules",
         "All about training",
+        "Courses"
     ],
     "ja": [
         "言語選択",
@@ -62,6 +63,7 @@ export const footer = {
         "ダウンロード ",
         "コンペティションルール ",
         "トレーニングの周辺",
+        "コース"
     ],
     "un": [
         "Nyelvválasztás",
@@ -83,6 +85,7 @@ export const footer = {
         "Letöltések",
         "Versenyszabályok",
         "A képzés körül",
+        "Tanfolyamok"
     ],
     "uk": [
         "Вибір мови",
@@ -104,6 +107,7 @@ export const footer = {
         "Завантаження",
         "Правила змагань",
         "Все про тренування",
+        "Курси"
     ]
 }
 
