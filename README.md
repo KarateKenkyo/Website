@@ -6,9 +6,7 @@ Die Offizielle Webseite des 'Karateverein Kenkyo Rheinzabern'
 
 ## TODO
 
-- [ ] Footer Subpage -> "Kursangebot"
-  - Wann ist wo und bei wem Training
-
+- [ ] Courses Übersetzten 
 - [ ] News Content Übersetzten 
 - [ ] News Content Blogeinträge schreiben 
 
