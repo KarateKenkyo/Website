@@ -55,27 +55,6 @@ export default function App() {
     const [current_lang, setCurrentLang] = useState("de");
 
     useEffect( () =>{
-        showNotification({
-            className: "cookies",
-            id: "cookies",
-            title: "Cookies",
-            disallowClose: false,
-            color: 'blue',
-            loading: false,
-            autoClose: true,
-            message: "Diese Website nutzt keine Cookies zur Datenerhebung und Statistik.",
-        });
-
-        showNotification({
-            className: "generall",
-            id: "generall",
-            title: "Information",
-            disallowClose: false,
-            color: 'red',
-            loading: false,
-            autoClose: true,
-            message: "Diese Website befindet sich noch in der aktiven Entwicklung und kann sommit Fehler aufweißen. Sollten Sie einen entdecken, dann meldet diese bitte dem zweiten Vorstand.",
-        });
         let name = "";
         let title = "";
         let text = "";
@@ -95,6 +74,28 @@ export default function App() {
             name = "ukr-banner"
             title = "Помилка перекладу";
             text = "Переклад може бути частково неправильним. Приносимо вибачення за можливі неточності. Якщо ви помітили будь-які помилки, будь ласка, зв'яжіться з нами";
+        } else if (current_lang === "de") {
+            showNotification({
+                className: "cookies",
+                id: "cookies",
+                title: "Cookies",
+                disallowClose: false,
+                color: 'blue',
+                loading: false,
+                autoClose: true,
+                message: "Diese Website nutzt keine Cookies zur Datenerhebung und Statistik.",
+            });
+
+            showNotification({
+                className: "generall",
+                id: "generall",
+                title: "Information",
+                disallowClose: false,
+                color: 'red',
+                loading: false,
+                autoClose: true,
+                message: "Diese Website befindet sich noch in der aktiven Entwicklung und kann sommit Fehler aufweißen. Sollten Sie einen entdecken, dann meldet diese bitte dem zweiten Vorstand.",
+            });
         }
         if (show) {
             showNotification({
