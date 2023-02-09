@@ -6,7 +6,7 @@ import {Image, Text, Button, Title, Badge, Group, Flex, Space, Divider} from "@m
 import TextToPage from "../../FloatingElement/TextToPage";
 import MyTitle from "../../Utils/MyTitle";
 import MyContent from "../../Utils/MyContent";
-import {news1, news2, news3} from "../../Content/NewsContent";
+import {news1/*, news2, news3*/} from "../../Content/NewsContent";
 import {items} from "../../Content/MenuContent";
 import {personsContent} from "../../Content/PersonsContent";
 import Language from "../Footer/Language";
