@@ -1,11 +1,9 @@
 // @ts-nocheck
-import {Badge, Avatar, ScrollArea, Container, Group, Modal, Spoiler, Text} from "@mantine/core";
+import {Badge, Avatar, Container, Group, Modal, Text} from "@mantine/core";
 import React, {useState} from "react";
-import {textToPage} from "../Content/PersonsContent";
 
 export default function TextToPage(props: any) {
     const [opened, setOpened] = useState(false);
-    let current_lang = props.current_lang; 
     function getInitials(name: any) {
         if (name) {
             var matches = name.match(/\b(\w)/g);
