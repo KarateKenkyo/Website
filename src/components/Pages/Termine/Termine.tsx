@@ -25,7 +25,7 @@ export default function Termine(props: any) {
     }
 
     console.log(noData);
-    if (noData) {
+    if (!noData) {
         return (
             <div className={"WeiteresBody"}>
                 <Space h={"xl"} />
