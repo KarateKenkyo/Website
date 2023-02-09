@@ -13,27 +13,26 @@ import Language from "../Footer/Language";
 export default function Training(props: any) {
     let current_lang = props.current_lang; 
     return (
-        <>
-            <div className={"TrainerBody"}>
-                <Space h={"xl"} />
-                <MyTitle order={1} content={items[current_lang][1]}/>
+        <div className={"TrainerBody"}>
+            <Space h={"xl"} />
+            <MyTitle order={1} content={items[current_lang][1]}/>
 
-                <Seperator />
+            <Seperator />
 
-                <Location current_lang={props.current_lang} />
+            <Times current_lang={props.current_lang} />
 
-                <Seperator />
+            <Seperator />
 
-                <Times current_lang={props.current_lang} />
+            <Offers current_lang={props.current_lang} />
 
-                <Seperator />
+            <Seperator />
 
-                <Offers current_lang={props.current_lang} />
+            <Location current_lang={props.current_lang} />
 
-                <FooterBody current_lang={props.current_lang}/>
-                <Language setCurrentLang={props.setCurrentLang} />
 
-            </div>
-        </>
+            <FooterBody current_lang={props.current_lang}/>
+            <Language setCurrentLang={props.setCurrentLang} />
+
+        </div>
     );
 }

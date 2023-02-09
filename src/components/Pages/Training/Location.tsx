@@ -7,12 +7,15 @@ import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import React from "react";
 
 export default function Location(props: any) {
-    let current_lang = props.current_lang;     return (
-        <Container>
-            <MyTitle content={dojo[current_lang][0]} />
-            <Space h="xl" />
-            <MyContent content={dojo[current_lang][1]} />
-            <MyContent content={dojo[current_lang][2]} />
+    let current_lang = props.current_lang;
+    return (
+        <>
+            <Container>
+                <MyTitle content={dojo[current_lang][0]} />
+                <Space h="xl" />
+                <MyContent content={dojo[current_lang][1]} />
+                <MyContent content={dojo[current_lang][2]} />
+            </Container>
             <MapContainer center={[49.105648, 8.281833]} zoom={18} scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -22,6 +25,6 @@ export default function Location(props: any) {
                     <Popup>{dojo[current_lang][0]}</Popup>
                 </Marker>
             </MapContainer>
-        </Container>
+        </>
     );
 }

@@ -8,13 +8,13 @@ export const page = {
 export const home = {
     "de": [
         "Wir sind ein Goju Ryu Karateverein der enormen Wert auf Tradition, Stategie, Philosophie, Technik und Körperkontrolle legt.",
-        "Wir Wünschen euch Viel Spaß auf unserer Webseite und hoffen euch im Training Persönlich begrüßen zu dürfen.",
+        "Viel Spaß auf unserer Webseite und hoffen euch im Training Persönlich begrüßen zu dürfen.",
         "Durch Mitgliedschaft im JKF sind wir in direktem Kontakt mit den Japanischen Großmeistern unserer Zeit.",
         "Nach Oben",
 
     ],
     "en": [
-        "We are a Goju Ryu Karate club that places great emphasis on tradition, strategy, philosophy, technique and body control,",
+        "Kenkyo is a Goju Ryu Karate club that places great emphasis on tradition, strategy, philosophy, technique and body control,",
         "We wish you a lot of fun on our website and hope to welcome you personally in the training.",
         "Through membership in the JKF, we are in direct contact with the Japanese Grandmasters of our time.",
         "Go up",
