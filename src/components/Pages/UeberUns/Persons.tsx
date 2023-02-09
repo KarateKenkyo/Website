@@ -52,21 +52,6 @@ function MyCard(props: any) {
 
             <Text ta="left" c="dimmed">{props.position}</Text>
 
-            {props.champion && (
-                <>
-                    <Space h="md" />
-                    <Divider />
-                    <Space h="md" />
-                    <Text ta="left" c="dimmed">{props.succ1}</Text>
-                    <Text ta="left" c="dimmed">{props.succ2}</Text>
-                    <Text ta="left" c="dimmed">{props.succ3}</Text>
-                    <Text ta="left" c="dimmed">{props.succ4}</Text>
-                    <Text ta="left" c="dimmed">{props.succ5}</Text>
-                    <Space h="md" />
-                    <Divider />
-                </>
-            )}
-
             {props.quote && !props.quoteOriginDifferent && (
                 <Blockquote>
                     <Text ta="left" size="lg" color="dimmed">
@@ -76,10 +61,10 @@ function MyCard(props: any) {
             )}
 
             <TextToPage
+                not_fullscreen={true}
                 current_lang={props.current_lang}
                 className={"PersonInfoButton"}
-                showButton={props.show}
-                not_scrolling={props.not_scrolling}
+                showButton={true}
                 size="xl"
                 openingText={
                     <Button
@@ -142,7 +127,6 @@ export default function Persons(props: any) {
                 wrap="wrap"
             >
                 <MyCard
-                    not_scrolling={true}
                     current_lang={props.current_lang}
                     title={"Zsolt Penderik"}
                     color={"dark"}
@@ -150,15 +134,13 @@ export default function Persons(props: any) {
                     position={personsContent[current_lang][0] + ", " + personsContent[current_lang][2] + ", " + personsContent[current_lang][3]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Zsolt.jpg"}
                     champion={true}
-                    fulltext="TODO"
+                    fulltext=""
                     succ1={zsoltContent[current_lang][0]}
                     succ2={zsoltContent[current_lang][1]}
                     succ3={zsoltContent[current_lang][2]}
                 />
                 <MyCard
-                    not_scrolling={false}
                     current_lang={props.current_lang}
-                    show={true}
                     title={"Raphaele Salvatore  Licciardo"}
                     color={"dark"}
                     grade={"1. Dan"}
@@ -188,7 +170,6 @@ export default function Persons(props: any) {
                 wrap="wrap"
             >
                 <MyCard
-                    not_scrolling={true}
                     current_lang={props.current_lang}
                     title={"Michael Kupper"}
                     color={"dark"}
@@ -196,12 +177,11 @@ export default function Persons(props: any) {
                     position={personsContent[current_lang][0] + ", " + personsContent[current_lang][6]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-2.jpeg"}
                     champion={true}
-                    fulltext="TODO"
+                    fulltext=""
                     succ1={zsoltContent[current_lang][0]}
                     succ2={zsoltContent[current_lang][1]}
                 />
                 <MyCard
-                    not_scrolling={true}
                     current_lang={props.current_lang}
                     title={"Dr. Evi Gleibs"}
                     color={"#6D4326"}
@@ -209,12 +189,10 @@ export default function Persons(props: any) {
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][7] + ", " + personsContent[current_lang][5]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-4.jpeg"}
                     champion={true}
-                    fulltext={"TODO"}
+                    fulltext={""}
                     succ1={zsoltContent[current_lang][1] + " " + zsoltContent[current_lang][3]}
                 />
                 <MyCard
-                    not_scrolling={true}
-                    show={true}
                     current_lang={props.current_lang}
                     title={"Monika Penderik"}
                     color={"dark"}
@@ -226,22 +204,21 @@ export default function Persons(props: any) {
                     succ1={zsoltContent[current_lang][0]}
                 />
                 <MyCard
-                    not_scrolling={true}
                     current_lang={props.current_lang}
                     title={"Darja Alena Kuklinski"}
                     color={"#6D4326"}
                     grade={"1. Kyu"}
                     position={personsContent[current_lang][1]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-3.jpeg"}
-                    fulltext="TODO"
+                    fulltext=""
                 />
                 <MyCard
-                    not_scrolling={true}
                     current_lang={props.current_lang}
                     title={"Maria Licciardo + Nala 🐾"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][8]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/mama1.jpg"}
-                    fulltext="TODO"
+                    fulltext=""
+                    color={"pink"}
                 />
             </Flex>
         </>
