@@ -51,14 +51,6 @@ function MyCard(props: any) {
 
             <Text ta="left" c="dimmed">{props.position}</Text>
 
-            {props.quote && !props.quoteOriginDifferent && (
-                <Blockquote>
-                    <Text ta="left" size="lg" color="dimmed">
-                        {props.quote}
-                    </Text>
-                </Blockquote>
-            )}
-
             <TextToPage
                 not_fullscreen={true}
                 current_lang={props.current_lang}
@@ -216,8 +208,10 @@ export default function Persons(props: any) {
                     title={"Maria Licciardo + Nala 🐾"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][8]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/mama1.jpg"}
-                    fulltext=""
+                    fulltext={raphaeleContent[current_lang][7]}
                     color={"pink"}
+                    champion={true}
+                    quote={raphaeleContent[current_lang][8]}
                 />
             </Flex>
         </>

@@ -11,3 +11,6 @@ Die Offizielle Webseite des 'Karateverein Kenkyo Rheinzabern'
 - Kata, Bunkai, SV, ... Videos aufnehmen
 - Kurzmitgliedschaften Subdomain Page
 
+- Mama Foto Retuschieren 
+- Cards.tsx einheitlich groß machen 
+
