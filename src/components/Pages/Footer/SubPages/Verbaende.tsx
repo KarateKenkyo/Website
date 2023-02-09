@@ -4,11 +4,11 @@ import {footer} from "../../../Content/FooterContent";
 import React from "react";
 import TextToPage from "../../../FloatingElement/TextToPage";
 
-export default function Verbaende() {
-    let current_lang = window.location.href.split("/")[3] as String;
-
+export default function Verbaende(props: any) {
+    let current_lang = props.current_lang; 
     return (
         <TextToPage
+            current_lang={props.current_lang}
             showButton={true}
             size="xl"
             not_scrolling={true}

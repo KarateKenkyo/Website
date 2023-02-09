@@ -8,9 +8,8 @@ import {items} from "../../Content/MenuContent";
 import Language from "../Footer/Language";
 import {termine, termineHeader} from "../../Content/TermineContent";
 
-export default function Termine() {
-    let current_lang = window.location.href.split("/")[3] as String;
-
+export default function Termine(props: any) {
+    let current_lang = props.current_lang; 
     let rows: any;
     for (let i = 0; i < 6; i++) {
         rows = termine[current_lang].map((e) => (
@@ -42,8 +41,8 @@ export default function Termine() {
                     <tbody>{rows}</tbody>
                 </Table>
 
-                <FooterBody/>
-                <Language />
+                <FooterBody current_lang={props.current_lang}/>
+                <Language setCurrentLang={props.setCurrentLang}/>
             </div>
         </>
     );

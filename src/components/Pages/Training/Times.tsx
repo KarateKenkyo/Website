@@ -5,9 +5,8 @@ import {Stack, Grid, Container, Space} from "@mantine/core";
 import React from "react";
 import Cards from "./Cards";
 
-export default function Times() {
-    let current_lang = window.location.href.split("/")[3] as String;
-    return (
+export default function Times(props: any) {
+    let current_lang = props.current_lang;     return (
         <Container>
             <MyTitle content={times[current_lang][0]} />
             <Space h="xl" />

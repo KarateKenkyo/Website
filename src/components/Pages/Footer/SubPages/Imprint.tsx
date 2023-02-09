@@ -6,10 +6,10 @@ import {footer, imprint} from "../../../Content/FooterContent";
 import {Title} from "@mantine/core";
 import TextToPage from "../../../FloatingElement/TextToPage";
 
-export default function Imprint() {
-    let current_lang = window.location.href.split("/")[3] as String;
-
+export default function Imprint(props: any) {
+    let current_lang = props.current_lang; 
     return(<TextToPage
+                current_lang={props.current_lang}
                 size="xl"
                 showButton={true}
                 openingText={footer[current_lang][2]}

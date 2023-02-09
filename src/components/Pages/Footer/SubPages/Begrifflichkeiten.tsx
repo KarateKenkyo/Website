@@ -5,9 +5,8 @@ import {begrifflichkeiten, footer} from "../../../Content/FooterContent";
 import React from "react";
 import TextToPage from "../../../FloatingElement/TextToPage";
 
-export default function Begrifflichkeiten() {
-    let current_lang = window.location.href.split("/")[3] as String;
-
+export default function Begrifflichkeiten(props: any) {
+    let current_lang = props.current_lang; 
     let grusformeln = [
         { japan: "musubi-dachi",        deutsch: begrifflichkeiten[current_lang][3],                     hinweis: "-" },
         { japan: "seiza",               deutsch: begrifflichkeiten[current_lang][4],                         hinweis: "-" },
@@ -55,6 +54,7 @@ export default function Begrifflichkeiten() {
 
     return(
         <TextToPage
+            current_lang={props.current_lang}
             size="xl"
             openingText={footer[current_lang][9]}
             title={<Title order={1}>{footer[current_lang][9]}</Title>}

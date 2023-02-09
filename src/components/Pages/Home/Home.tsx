@@ -8,9 +8,8 @@ import {home, succ} from "../../Content/HomeContent";
 import Language from "../Footer/Language";
 import MyContent from "../../Utils/MyContent";
 
-export default function Home() {
-    let current_lang = window.location.href.split("/")[3] as String;
-
+export default function Home(props: any) {
+    let current_lang = props.current_lang; 
     return (
         <>
             <div className={"HomeBody"}>
@@ -22,8 +21,8 @@ export default function Home() {
                 <MyContent content={home[current_lang][0]} />
                 <MyContent content={home[current_lang][1]} />
                 <MyContent content={home[current_lang][2]} />
-                <FooterBody/>
-                <Language />
+                <FooterBody current_lang={props.current_lang}/>
+                <Language setCurrentLang={props.setCurrentLang} />
             </div>
         </>
     );

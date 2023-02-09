@@ -7,18 +7,18 @@ import IntroGojuRyu from "./IntroGojuRyu";
 import {footer} from "../../../../Content/FooterContent";
 import TextToPage from "../../../../FloatingElement/TextToPage";
 
-export default function History() {
-    let current_lang = window.location.href.split("/")[3] as String;
-    return(
+export default function History(props: any) {
+    let current_lang = props.current_lang;     return(
         <TextToPage
+            current_lang={props.current_lang}
             showButton={true}
             size="xl"
             openingText={footer[current_lang][11]}
             title={<Title order={1}>{footer[current_lang][11]}</Title>}
             content={
                 <Container>
-                    <IntroGojuRyu />
-                    <MyTimeline />
+                    <IntroGojuRyu current_lang={props.current_lang} />
+                    <MyTimeline current_lang={props.current_lang} />
                     {/*<IntroKenkyo />*/}
                 </Container>
             }/>

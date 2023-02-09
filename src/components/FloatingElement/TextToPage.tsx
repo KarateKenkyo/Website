@@ -5,8 +5,7 @@ import {textToPage} from "../Content/PersonsContent";
 
 export default function TextToPage(props: any) {
     const [opened, setOpened] = useState(false);
-    let current_lang = window.location.href.split("/")[3] as String;
-
+    let current_lang = props.current_lang; 
     function getInitials(name: any) {
         if (name) {
             var matches = name.match(/\b(\w)/g);

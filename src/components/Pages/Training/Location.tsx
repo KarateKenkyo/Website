@@ -6,9 +6,8 @@ import MyContent from "../../Utils/MyContent";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import React from "react";
 
-export default function Location() {
-    let current_lang = window.location.href.split("/")[3] as String;
-    return (
+export default function Location(props: any) {
+    let current_lang = props.current_lang;     return (
         <Container>
             <MyTitle content={dojo[current_lang][0]} />
             <Space h="xl" />

@@ -5,10 +5,10 @@ import {Title} from "@mantine/core";
 import React from "react";
 import TextToPage from "../../../FloatingElement/TextToPage";
 
-export default function Sponsoren() {
-    let current_lang = window.location.href.split("/")[3] as String;
-    return (
+export default function Sponsoren(props: any) {
+    let current_lang = props.current_lang;     return (
         <TextToPage
+            current_lang={props.current_lang}
             size="xl"
             showButton={true}
             not_scrolling={true}

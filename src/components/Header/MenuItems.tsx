@@ -4,7 +4,7 @@ import {items} from "../Content/MenuContent";
 import {Text} from "@mantine/core";
 
 export default function MenuItems(props: any) {
-    let current_lang = window.location.href.split("/")[3] as String;
+    let current_lang = props.current_lang;//window.location.href.split("/")[3] as String;
 
     function handleHome() {
         props.showHome(true);

@@ -6,8 +6,7 @@ import React from "react";
 import TextToPage from "../../../FloatingElement/TextToPage";
 
 export default function Kontakt(props: any) {
-    let current_lang = window.location.href.split("/")[3] as String;
-    return (
+    let current_lang = props.current_lang;     return (
         <TextToPage
             showButton={true}
             openingText={

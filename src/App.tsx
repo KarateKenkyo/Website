@@ -2,7 +2,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.scss';
 import {Affix, Button, MantineProvider, Transition} from "@mantine/core";
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import {NotificationsProvider, showNotification} from "@mantine/notifications";
 import Home from "./components/Pages/Home/Home";
 import Training from "./components/Pages/Training/Training";
@@ -23,18 +22,30 @@ function Body(props: any) {
                 showTraining={props.setShowTraining}
                 showUeberUns={props.setShowUeberUns}
                 showTermine={props.setShowTermine}
-                showNews={props.setShowNews}/>
-            <LandingPage
+                showNews={props.setShowNews}
+                current_lang={props.current_lang} />
+             <LandingPage
                 showHome={props.showHome}
                 showTraining={props.showTraining}
                 showUeberUns={props.showUeberUns}
                 showTermine={props.showTermine}
                 showNews={props.showNews}/>
-            {props.showHome && <Home />}
-            {props.showTraining && <Training />}
-            {props.showUeberUns && <UeberUns />}
-            {props.showTermine && <Termine />}
-            {props.showNews && <News />}
+            {props.showHome && <Home
+                                    setCurrentLang={props.setCurrentLang}
+                                    current_lang={props.current_lang}/>}
+            {props.showTraining && <Training
+                                    setCurrentLang={props.setCurrentLang}
+                                    current_lang={props.current_lang}/>}
+            {props.showUeberUns && <UeberUns
+                                    setCurrentLang={props.setCurrentLang}
+                                    current_lang={props.current_lang}/>}
+            {props.showTermine && <Termine
+                                    setCurrentLang={props.setCurrentLang}
+                                    current_lang={props.current_lang}/>}
+            {props.showNews && <News
+                                    setCurrentLang={props.setCurrentLang}
+                                    current_lang={props.current_lang}/>}
+
         </>
     );
 }
@@ -77,9 +88,7 @@ export default function App() {
             });
         }
     }, []);
-
-    let current_lang = window.location.href.split("/")[3] as String;
-
+    const [current_lang, setCurrentLang] = useState("de");
     const [showHome, setShowHome] = useState(true);
     const [showTraining, setShowTraining] = useState(false);
     const [showUeberUns, setShowUeberUns] = useState(false);
@@ -106,83 +115,21 @@ export default function App() {
                     </Transition>
                 </Affix>
                 <div className="App" id="App">
-                    <BrowserRouter>
-                        <Routes>
-                            <Route path="/">
-                                <Route path="/" element={<Navigate to="/de" />}></Route>
-                                <Route index path="/de" element={
-                                    <Body
-                                        showHome={showHome}
-                                        showTraining={showTraining}
-                                        showUeberUns={showUeberUns}
-                                        showTermine={showTermine}
-                                        showNews={showNews}
-                                        setShowHome={setShowHome}
-                                        setShowTraining={setShowTraining}
-                                        setShowUeberUns={setShowUeberUns}
-                                        setShowTermine={setShowTermine}
-                                        setShowNews={setShowNews}
-                                    />
-                                } />
-                                <Route index path="/en" element={
-                                    <Body
-                                        showHome={showHome}
-                                        showTraining={showTraining}
-                                        showUeberUns={showUeberUns}
-                                        showTermine={showTermine}
-                                        showNews={showNews}
-                                        setShowHome={setShowHome}
-                                        setShowTraining={setShowTraining}
-                                        setShowUeberUns={setShowUeberUns}
-                                        setShowTermine={setShowTermine}
-                                        setShowNews={setShowNews}
-                                    />
-                                } />
-                                <Route index path="/ja" element={
-                                    <Body
-                                        showHome={showHome}
-                                        showTraining={showTraining}
-                                        showUeberUns={showUeberUns}
-                                        showTermine={showTermine}
-                                        showNews={showNews}
-                                        setShowHome={setShowHome}
-                                        setShowTraining={setShowTraining}
-                                        setShowUeberUns={setShowUeberUns}
-                                        setShowTermine={setShowTermine}
-                                        setShowNews={setShowNews}
-                                    />
-                                } />
-                                <Route index path="/un" element={
-                                    <Body
-                                        showHome={showHome}
-                                        showTraining={showTraining}
-                                        showUeberUns={showUeberUns}
-                                        showTermine={showTermine}
-                                        showNews={showNews}
-                                        setShowHome={setShowHome}
-                                        setShowTraining={setShowTraining}
-                                        setShowUeberUns={setShowUeberUns}
-                                        setShowTermine={setShowTermine}
-                                        setShowNews={setShowNews}
-                                    />
-                                } />
-                                <Route index path="/uk" element={
-                                    <Body
-                                        showHome={showHome}
-                                        showTraining={showTraining}
-                                        showUeberUns={showUeberUns}
-                                        showTermine={showTermine}
-                                        showNews={showNews}
-                                        setShowHome={setShowHome}
-                                        setShowTraining={setShowTraining}
-                                        setShowUeberUns={setShowUeberUns}
-                                        setShowTermine={setShowTermine}
-                                        setShowNews={setShowNews}
-                                    />
-                                } />
-                            </Route>
-                        </Routes>
-                    </BrowserRouter>
+
+                    <Body
+                        showHome={showHome}
+                        showTraining={showTraining}
+                        showUeberUns={showUeberUns}
+                        showTermine={showTermine}
+                        showNews={showNews}
+                        setShowHome={setShowHome}
+                        setShowTraining={setShowTraining}
+                        setShowUeberUns={setShowUeberUns}
+                        setShowTermine={setShowTermine}
+                        setShowNews={setShowNews}
+                        current_lang={current_lang}
+                        setCurrentLang={setCurrentLang}
+                    />
                 </div>
             </NotificationsProvider>
         </MantineProvider>

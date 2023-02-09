@@ -10,9 +10,8 @@ import Times from "./Times";
 import Location from "./Location";
 import Language from "../Footer/Language";
 
-export default function Training() {
-    let current_lang = window.location.href.split("/")[3] as String;
-
+export default function Training(props: any) {
+    let current_lang = props.current_lang; 
     return (
         <>
             <div className={"TrainerBody"}>
@@ -21,17 +20,19 @@ export default function Training() {
 
                 <Seperator />
 
-                <Location />
+                <Location current_lang={props.current_lang} />
 
                 <Seperator />
 
-                <Times />
+                <Times current_lang={props.current_lang} />
 
                 <Seperator />
 
-                <Offers />
-                <FooterBody/>
-                <Language />
+                <Offers current_lang={props.current_lang} />
+
+                <FooterBody current_lang={props.current_lang}/>
+                <Language setCurrentLang={props.setCurrentLang} />
+
             </div>
         </>
     );

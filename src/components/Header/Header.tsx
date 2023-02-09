@@ -10,7 +10,9 @@ export default function Header(props: any) {
                 showUeberUns={props.showUeberUns}
                 showTraining={props.showTraining}
                 showTermine={props.showTermine}
-                showNews={props.showNews}/>
+                showNews={props.showNews}
+                current_lang={props.current_lang}
+            />
         </div>
     );
 }

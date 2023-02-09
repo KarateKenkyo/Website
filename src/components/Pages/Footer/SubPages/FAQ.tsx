@@ -17,10 +17,10 @@ function AccordionCard(props: any) {
 }
 
 export default function FAQ(props: any) {
-    // let current_lang = window.location.href.split("/")[3] as String;
-
+    let current_lang = props.current_lang; 
     return (
         <TextToPage
+            current_lang={props.current_lang}
             showButton={true}
             openingText={"Häufige Fragen"}
             size="xl"

@@ -12,8 +12,7 @@ import {personsContent} from "../../Content/PersonsContent";
 import Language from "../Footer/Language";
 
 function NewsBox(props: any) {
-    let current_lang = window.location.href.split("/")[3] as String;
-
+    let current_lang = props.current_lang; 
     return (
         <div className={"NewsBox"}>
             <div style={{ width: 400, marginLeft: 'auto', marginRight: 'auto' }}>
@@ -31,6 +30,7 @@ function NewsBox(props: any) {
                 <Space h={"xs"} />
                 <MyContent content={props.news_id[current_lang][2]} />
                 <TextToPage
+                    current_lang={props.current_lang}
                     showButton={true}
                     date={props.date}
                     type={props.news_id[current_lang][4]}
@@ -76,9 +76,8 @@ function NewsBox(props: any) {
     );
 }
 
-export default function News() {
-    let current_lang = window.location.href.split("/")[3] as String;
-
+export default function News(props: any) {
+    let current_lang = props.current_lang; 
     return (
         <>
             <div className={"NewsBody"}>
@@ -97,6 +96,7 @@ export default function News() {
                 >
 
                     <NewsBox
+                        current_lang={props.current_lang}
                         news_id={news3}
                         date={"15.04.2023"}
                         cont1={"Zsolt Penderik"}
@@ -106,6 +106,7 @@ export default function News() {
                         cont5={"Monika Penderik"}
                     />
                     <NewsBox
+                        current_lang={props.current_lang}
                         news_id={news2}
                         date={"01.04.2023"}
                         cont1={"Zsolt Penderik"}
@@ -114,6 +115,7 @@ export default function News() {
                         cont4={"Maria Licciardo"}
                     />
                     <NewsBox
+                        current_lang={props.current_lang}
                         news_id={news1}
                         date={"06.01.2022"}
                         cont1={"Zsolt Penderik"}
@@ -125,8 +127,8 @@ export default function News() {
                         cont7={"Maria Licciardo"}
                     />
                 </Flex>
-                <FooterBody />
-                <Language />
+                <FooterBody current_lang={props.current_lang}/>
+                <Language setCurrentLang={props.setCurrentLang}/>
             </div>
         </>
     );

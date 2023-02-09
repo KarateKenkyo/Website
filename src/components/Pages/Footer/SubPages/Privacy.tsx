@@ -6,11 +6,11 @@ import MyContent from "../../../Utils/MyContent";
 import {footer, privacy} from "../../../Content/FooterContent";
 import TextToPage from "../../../FloatingElement/TextToPage";
 
-export default function Privacy() {
-    let current_lang = window.location.href.split("/")[3] as String;
-
+export default function Privacy(props: any) {
+    let current_lang = props.current_lang; 
     return(
         <TextToPage
+            current_lang={props.current_lang}
             size="xl"
             showButton={true}
             openingText={footer[current_lang][3]}

@@ -6,10 +6,10 @@ import React from "react";
 import TextToPage from "../../../FloatingElement/TextToPage";
 import MyTitle from "../../../Utils/MyTitle";
 
-export default function Rules() {
-    let current_lang = window.location.href.split("/")[3] as String;
-    return (
+export default function Rules(props: any) {
+    let current_lang = props.current_lang;     return (
         <TextToPage
+            current_lang={props.current_lang}
             size="xl"
             showButton={true}
             openingText={verhalten[current_lang][0]}

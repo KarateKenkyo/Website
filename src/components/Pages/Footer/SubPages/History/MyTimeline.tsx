@@ -4,9 +4,8 @@ import React from "react";
 import TextToPicture from "../../../../FloatingElement/TextToPicture";
 import {timeline} from "../../../../Content/FooterContent";
 
-export default function myTimeline() {
-    let current_lang = window.location.href.split("/")[3] as String;
-
+export default function myTimeline(props: any) {
+    let current_lang = props.current_lang; 
     return (
         <Timeline bulletSize={24} lineWidth={2}>
             <Timeline.Item lineVariant="dashed"

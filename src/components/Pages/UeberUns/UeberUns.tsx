@@ -8,8 +8,8 @@ import {items} from "../../Content/MenuContent";
 import Persons from "./Persons";
 import Language from "../Footer/Language";
 
-export default function UeberUns() {
-    let current_lang = window.location.href.split("/")[3] as String;
+export default function UeberUns(props: any) {
+    let current_lang = props.current_lang;//window.location.href.split("/")[3] as String;
 
     return (
         <>
@@ -19,10 +19,10 @@ export default function UeberUns() {
 
                 <Seperator />
 
-                <Persons />
+                <Persons current_lang={props.current_lang} />
 
-                <FooterBody />
-                <Language />
+                <FooterBody current_lang={props.current_lang}/>
+                <Language setCurrentLang={props.setCurrentLang} />
             </div>
         </>
     );

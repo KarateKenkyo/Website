@@ -19,8 +19,8 @@ import FAQ from "./SubPages/FAQ";
 import Anmeldeformular from "./SubPages/Anmeldeformular";
 import Kuendigungsvorlage from "./SubPages/Kuendigungsvorlage";
 
-export default function FooterBody() {
-    let current_lang = window.location.href.split("/")[3] as String;
+export default function FooterBody(props: any) {
+    let current_lang = props.current_lang; 
     const [width, setWidth] = useState<number>(window.innerWidth);
 
     function handleWindowSizeChange() {
@@ -61,23 +61,23 @@ export default function FooterBody() {
                         wrap="wrap"
                     >
                         <Stack>
-                            <Begrifflichkeiten />
-                            <History />
-                            <Rules />
+                            <Begrifflichkeiten  current_lang={props.current_lang} />
+                            <History current_lang={props.current_lang} />
+                            <Rules current_lang={props.current_lang} />
                         </Stack>
                         <Stack>
-                            <Verbaende />
-                            <Sponsoren />
-                            <FAQ />
+                            <Verbaende current_lang={props.current_lang} />
+                            <Sponsoren current_lang={props.current_lang} />
+                            <FAQ current_lang={props.current_lang}/>
                         </Stack>
                     </Flex>
                 </Stack>
                 {!isMobile && <Divider orientation="vertical" /> }
                 <Stack>
                     <Title order={4}>{footer[current_lang][1]}</Title>
-                    <Imprint />
-                    <Privacy />
-                    <Kontakt />
+                    <Imprint current_lang={props.current_lang}/>
+                    <Privacy current_lang={props.current_lang}/>
+                    <Kontakt current_lang={props.current_lang}/>
                 </Stack>
                 {!isMobile && <Divider orientation="vertical" /> }
                 <Stack>
@@ -91,14 +91,14 @@ export default function FooterBody() {
                         wrap="wrap"
                     >
                         <Stack>
-                            <Anmeldeformular title={footer[current_lang][12]} />
-                            <Kuendigungsvorlage title={footer[current_lang][13]} />
+                            <Anmeldeformular current_lang={props.current_lang} title={footer[current_lang][12]} />
+                            <Kuendigungsvorlage current_lang={props.current_lang} title={footer[current_lang][13]} />
                             <Text c={"dimmed"}>{footer[current_lang][14]}</Text>
                         </Stack>
                         <Stack>
-                            <Pruefungsordnung title={footer[current_lang][15]} />
-                            <Wettkampfregeln title={footer[current_lang][17]} />
-                            <Satzung title={footer[current_lang][8]} />
+                            <Pruefungsordnung current_lang={props.current_lang} title={footer[current_lang][15]} />
+                            <Wettkampfregeln  current_lang={props.current_lang} title={footer[current_lang][17]} />
+                            <Satzung  current_lang={props.current_lang} title={footer[current_lang][8]} />
                         </Stack>
                     </Flex>
                 </Stack>

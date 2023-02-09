@@ -2,21 +2,13 @@
 import {Image} from "@mantine/core";
 import React from "react";
 
-export default function Language() {
+export default function Language(props: any) {
 
-    function handle(lang: any) {
-        let url = window.location.href;
-        let current_lang = url.split("/")[3];
-        if (current_lang !== lang) {
-            let new_url = url.replace(current_lang, lang)
-            window.location.replace(new_url);
-        }
-    }
-    function handleGer() { handle("de") }
-    function handleEng() { handle("en") }
-    function handleJap() { handle("ja") }
-    function handleUng() { handle("un") }
-    function handleUkr() { handle("uk") }
+    function handleGer() { props.setCurrentLang("de") }
+    function handleEng() { props.setCurrentLang("en") }
+    function handleJap() { props.setCurrentLang("ja") }
+    function handleUng() { props.setCurrentLang("un") }
+    function handleUkr() { props.setCurrentLang("uk") }
 
     return (
         <div className={"FloatingLangChooser"}>

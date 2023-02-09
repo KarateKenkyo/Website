@@ -18,8 +18,7 @@ import {personsContent, raphaeleContent, zsoltContent} from "../../Content/Perso
 import Seperator from "../Home/Seperator";
 
 function MyCard(props: any) {
-    let current_lang = window.location.href.split("/")[3] as String;
-    return (
+    let current_lang = props.current_lang;     return (
         <Card shadow="sm" p="lg" radius="md" withBorder className={"MyCard"}>
             <Card.Section>
                 <Image
@@ -77,6 +76,7 @@ function MyCard(props: any) {
             )}
 
             <TextToPage
+                current_lang={props.current_lang}
                 className={"PersonInfoButton"}
                 showButton={props.show}
                 size="xl"
@@ -129,9 +129,8 @@ function MyCard(props: any) {
     );
 }
 
-export default function Persons() {
-    let current_lang = window.location.href.split("/")[3] as String;
-    return (
+export default function Persons(props: any) {
+    let current_lang = props.current_lang;     return (
         <>
             <Flex
                 mih={50}
@@ -142,6 +141,7 @@ export default function Persons() {
                 wrap="wrap"
             >
                 <MyCard
+                    current_lang={props.current_lang}
                     title={"Zsolt Penderik"}
                     color={"dark"}
                     grade={"5. Dan"}
@@ -154,6 +154,7 @@ export default function Persons() {
                     succ3={zsoltContent[current_lang][2]}
                 />
                 <MyCard
+                    current_lang={props.current_lang}
                     show={true}
                     title={"Raphaele Salvatore  Licciardo"}
                     color={"dark"}
@@ -184,6 +185,7 @@ export default function Persons() {
                 wrap="wrap"
             >
                 <MyCard
+                    current_lang={props.current_lang}
                     title={"Michael Kupper"}
                     color={"dark"}
                     grade={"1. Dan"}
@@ -195,6 +197,7 @@ export default function Persons() {
                     succ2={zsoltContent[current_lang][1]}
                 />
                 <MyCard
+                    current_lang={props.current_lang}
                     title={"Dr. Evi Gleibs"}
                     color={"#6D4326"}
                     grade={"1. Kyu"}
@@ -205,6 +208,7 @@ export default function Persons() {
                     succ1={zsoltContent[current_lang][1] + " " + zsoltContent[current_lang][3]}
                 />
                 <MyCard
+                    current_lang={props.current_lang}
                     title={"Monika Penderik"}
                     color={"dark"}
                     grade={"1. Dan"}
@@ -215,6 +219,7 @@ export default function Persons() {
                     succ1={zsoltContent[current_lang][0]}
                 />
                 <MyCard
+                    current_lang={props.current_lang}
                     title={"Darja Alena Kuklinski"}
                     color={"#6D4326"}
                     grade={"1. Kyu"}
@@ -223,6 +228,7 @@ export default function Persons() {
                     fulltext="TODO"
                 />
                 <MyCard
+                    current_lang={props.current_lang}
                     title={"Maria Licciardo + Nala 🐾"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][8]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/mama1.jpg"}

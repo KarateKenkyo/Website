@@ -7,14 +7,13 @@ import React from "react";
 import {offers} from "../../Content/TrainerContent";
 import Cards from "./Cards";
 
-export default function Offers() {
-    let current_lang = window.location.href.split("/")[3] as String;
-    return (
+export default function Offers(props: any) {
+    let current_lang = props.current_lang;     return (
         <Container>
             <MyTitle content={offers[current_lang][0]} />
             <Space h="xl" />
             <MyContent content={offers[current_lang][1]} />
-            <Kontakt button={true} />
+            <Kontakt button={true} current_lang={props.current_lang}/>
             <Space h="lg" />
             <MyContent content={offers[current_lang][13]} />
             <Space h="xl" />
