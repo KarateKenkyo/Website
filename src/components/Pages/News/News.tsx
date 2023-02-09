@@ -30,17 +30,10 @@ function NewsBox(props: any) {
                 <Space h={"xs"} />
                 <MyContent content={props.news_id[current_lang][2]} />
                 <TextToPage
+                    not_fullscreen={true}
                     current_lang={props.current_lang}
                     showButton={true}
                     date={props.date}
-                    type={props.news_id[current_lang][4]}
-                    cont1={props.cont1}
-                    cont2={props.cont2}
-                    cont3={props.cont3}
-                    cont4={props.cont4}
-                    cont5={props.cont5}
-                    cont6={props.cont6}
-                    cont7={props.cont7}
                     className={"PersonInfoButton"}
                     size="xl"
                     openingText={
@@ -54,20 +47,7 @@ function NewsBox(props: any) {
                         </Button>
                     }
                     title={<Title order={1}>{props.news_id[current_lang][1]}</Title>}
-                    content={
-                        <>
-                            <Image
-                                radius="md"
-                                src={props.news_id[current_lang][0]}
-                                alt="Hier sollte ein Bild sein ..."
-                                withPlaceholder
-                            />
-                            <Space h={"xl"} />
-                            <Text c="dimmed">
-                                {props.news_id[current_lang][3]}
-                            </Text>
-                        </>
-                    } />
+                    content={<Text c="dimmed"> {props.news_id[current_lang][3]} </Text>} />
                 <Space h={"md"} />
             </div>
             <Divider />

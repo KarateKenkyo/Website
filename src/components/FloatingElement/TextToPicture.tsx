@@ -14,14 +14,12 @@ export default function FloatingTextToPicture(props: any) {
                 withCloseButton={true}
                 onClose={() => setOpened(false)}
             >
-                <ScrollArea style={{ height: 600 }}>
-                    <Image
-                        radius="md"
-                        src={props.pic}
-                        alt="Hier sollte ein Bild sein ..."
-                        withPlaceholder
-                    />
-                </ScrollArea>
+                <Image
+                    radius="md"
+                    src={props.pic}
+                    alt="Hier sollte ein Bild sein ..."
+                    withPlaceholder
+                />
             </Modal>
 
             <Tooltip label={props.label} position="right" withArrow>

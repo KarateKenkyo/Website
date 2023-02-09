@@ -8,6 +8,7 @@ import TextToPage from "../../../FloatingElement/TextToPage";
 export default function Kontakt(props: any) {
     let current_lang = props.current_lang;     return (
         <TextToPage
+            not_fullscreen={true}
             showButton={true}
             openingText={
                 <>
@@ -35,19 +36,42 @@ export default function Kontakt(props: any) {
                         wrap="wrap">
                         <Seperator />
                         <div>
-                            <div>Vorstand</div>
+                            <Title order={4}>Vorstand</Title>
                             <div>Zsolt Penderik</div>
                             <div>Rappengasse 32</div>
                             <div>76764 Rheinzabern</div>
                             <a href="mailto:angenehm001@gmail.com">angenehm001@gmail.com</a>
                         </div>
                         <Seperator />
+                    </Flex>
+                    <Seperator />
+                    <Flex
+                        mih={50}
+                        gap="md"
+                        direction="row"
+                        wrap="wrap">
+                        <Seperator />
                         <div>
-                            <div>Stellvertretender Vorstand</div>
+                            <Title order={4}>Stellvertretender Vorstand</Title>
                             <div>Raphaele Salvatore Licciardo</div>
                             <div>Sparbenhecke 1</div>
                             <div>76744 Maximiliansau</div>
                             <a href="mailto:raphaele.salvatore@outlook.de">raphaele.salvatore@outlook.de</a>
+                        </div>
+                    </Flex>
+                    <Seperator />
+                    <Flex
+                        mih={50}
+                        gap="md"
+                        direction="row"
+                        wrap="wrap">
+                    <Seperator />
+                        <div>
+                            <Title order={4}>Mutti für alles</Title>
+                            <div>Maria Licciardo</div>
+                            <div>Sparbenhecke 1</div>
+                            <div>76744 Maximiliansau</div>
+                            <a href="mailto:licciardo.maria@outlook.de">licciardo.maria@outlook.de</a>
                         </div>
                     </Flex>
                     <Seperator />

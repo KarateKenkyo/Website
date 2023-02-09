@@ -8,6 +8,7 @@ export default function Verbaende(props: any) {
     let current_lang = props.current_lang; 
     return (
         <TextToPage
+            not_fullscreen={true}
             current_lang={props.current_lang}
             showButton={true}
             size="xl"

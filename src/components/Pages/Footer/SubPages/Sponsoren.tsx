@@ -8,6 +8,7 @@ import TextToPage from "../../../FloatingElement/TextToPage";
 export default function Sponsoren(props: any) {
     let current_lang = props.current_lang;     return (
         <TextToPage
+            not_fullscreen={true}
             current_lang={props.current_lang}
             size="xl"
             showButton={true}
