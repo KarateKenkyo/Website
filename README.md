@@ -6,9 +6,8 @@ Die Offizielle Webseite des 'Karateverein Kenkyo Rheinzabern'
 
 ## TODO
 
-- FAQ Translate
-- Datenschutzformular PDF
 - SEO
+- Datenschutzformular PDF
 - Kata, Bunkai, SV, ... Videos aufnehmen
 - Kurzmitgliedschaften Subdomain Page
 
