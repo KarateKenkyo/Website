@@ -71,7 +71,7 @@ export default function App() {
             text = "A fordítás részben hibás lehet. Elnézést kérünk az esetleges pontatlanságokért. Ha bármilyen hibát észlel, kérjük, ne habozzon kapcsolatba lépni velünk.";
         } else if (current_lang === "uk") {
             show = true;
-            name = "hun-banner"
+            name = "ukr-banner"
             title = "Помилка перекладу";
             text = "Переклад може бути частково неправильним. Приносимо вибачення за можливі неточності. Якщо ви помітили будь-які помилки, будь ласка, зв'яжіться з нами";
         }
