@@ -54,6 +54,28 @@ export default function App() {
     const [scroll, scrollTo] = useWindowScroll();
     const [current_lang, setCurrentLang] = useState("de");
 
+    showNotification({
+        className: "cookies",
+        id: "cookies",
+        title: "Cookies",
+        disallowClose: false,
+        color: 'blue',
+        loading: false,
+        autoClose: false,
+        message: "Diese Website nutzt keine Cookies zur Datenerhebung und Statistik.",
+    });
+
+    showNotification({
+        className: "generall",
+        id: "generall",
+        title: "Information",
+        disallowClose: false,
+        color: 'red',
+        loading: false,
+        autoClose: false,
+        message: "Diese Website befindet sich noch in der aktiven Entwicklung und kann sommit Fehler aufweißen. Sollten Sie einen entdecken, dann meldet diese bitte dem zweiten Vorstand.",
+    });
+
     useEffect( () =>{
         let name = "";
         let title = "";
