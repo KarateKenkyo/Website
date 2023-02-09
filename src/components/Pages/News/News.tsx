@@ -75,7 +75,7 @@ export default function News(props: any) {
                     wrap="wrap"
                 >
 
-                    <NewsBox
+                    {/*<NewsBox
                         current_lang={props.current_lang}
                         news_id={news3}
                         date={"15.04.2023"}
@@ -93,7 +93,7 @@ export default function News(props: any) {
                         cont2={"Raphaele Licciardo"}
                         cont3={"Monika Penderik"}
                         cont4={"Maria Licciardo"}
-                    />
+                    />*/}
                     <NewsBox
                         current_lang={props.current_lang}
                         news_id={news1}
