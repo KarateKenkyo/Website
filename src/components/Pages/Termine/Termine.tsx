@@ -1,17 +1,19 @@
 // @ts-nocheck
 import FooterBody from "../Footer/FooterBody";
-import React from "react";
+import React, {useState} from "react";
 import Seperator from "../Home/Seperator";
 import {Center, Space, Table} from "@mantine/core";
 import MyTitle from "../../Utils/MyTitle";
+import MyContent from "../../Utils/MyContent";
 import {items} from "../../Content/MenuContent";
 import Language from "../Footer/Language";
-import {termine, termineHeader} from "../../Content/TermineContent";
+import {noTermine, termine, termineHeader} from "../../Content/TermineContent";
 
 export default function Termine(props: any) {
-    let current_lang = props.current_lang; 
+    let current_lang = props.current_lang;
+    const [noData, setNoData] = useState(termine[current_lang].length === 0);
     let rows: any;
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < termine[current_lang].length; i++) {
         rows = termine[current_lang].map((e) => (
             <tr key={e.name}>
                 <td><Center>{e.event}</Center></td>
@@ -22,8 +24,9 @@ export default function Termine(props: any) {
         ));
     }
 
-    return (
-        <>
+    console.log(noData);
+    if (noData) {
+        return (
             <div className={"WeiteresBody"}>
                 <Space h={"xl"} />
                 <MyTitle order={1} content={items[current_lang][3]} />
@@ -44,6 +47,20 @@ export default function Termine(props: any) {
                 <FooterBody current_lang={props.current_lang}/>
                 <Language setCurrentLang={props.setCurrentLang}/>
             </div>
-        </>
-    );
+        );
+
+    } else {
+        return (
+            <div className={"WeiteresBody"}>
+                <Space h={"xl"} />
+                <MyTitle order={1} content={items[current_lang][3]} />
+
+                <Seperator />
+                <MyContent content={noTermine[current_lang]} />
+
+                <FooterBody current_lang={props.current_lang}/>
+                <Language setCurrentLang={props.setCurrentLang}/>
+            </div>
+        );
+    }
 }

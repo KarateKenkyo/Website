@@ -1,3 +1,21 @@
+export const noTermine = {
+    "de":  [
+        "Keine Termine",
+    ],
+    "en": [
+        "No upcoming events"
+    ],
+    "ja": [
+        "日付はありません",
+    ],
+    "un": [
+        "Nincsenek időpontok"
+    ],
+    "uk": [
+        "Без дат"
+    ]
+}
+
 export const termineHeader = {
     "de":  [
         "Event",
