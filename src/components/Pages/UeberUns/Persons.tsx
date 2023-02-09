@@ -205,9 +205,9 @@ export default function Persons(props: any) {
                 />
                 <MyCard
                     current_lang={props.current_lang}
-                    title={"Maria Licciardo + Nala 🐾"}
+                    title={"Maria Licciardo"}
                     position={personsContent[current_lang][1] + ", " + personsContent[current_lang][8]}
-                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/mama1.jpg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/mama.jpg"}
                     fulltext={raphaeleContent[current_lang][7]}
                     color={"pink"}
                     champion={true}
