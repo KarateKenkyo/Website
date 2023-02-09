@@ -52,30 +52,30 @@ function Body(props: any) {
 
 export default function App() {
     const [scroll, scrollTo] = useWindowScroll();
+    const [current_lang, setCurrentLang] = useState("de");
 
     useEffect( () =>{
         let name = "";
         let title = "";
         let text = "";
         let show = false;
-        if (window.location.href.split("/")[3] === "ja") {
+        if (current_lang === "ja") {
             show = true;
             name = "jap-banner"
             title = "翻訳エラー";
             text = "翻訳に一部誤りがある可能性があります。不正確な情報がある場合は、申し訳ございません。誤記を発見された場合は、ご遠慮なく弊社までご連絡ください。";
-        } else if (window.location.href.split("/")[3] === "un") {
+        } else if (current_lang === "un") {
             show = true;
             name = "hun-banner"
             title = "Fordítási hiba";
             text = "A fordítás részben hibás lehet. Elnézést kérünk az esetleges pontatlanságokért. Ha bármilyen hibát észlel, kérjük, ne habozzon kapcsolatba lépni velünk.";
-        } else if (window.location.href.split("/")[3] === "uk") {
+        } else if (current_lang === "uk") {
             show = true;
             name = "hun-banner"
             title = "Помилка перекладу";
             text = "Переклад може бути частково неправильним. Приносимо вибачення за можливі неточності. Якщо ви помітили будь-які помилки, будь ласка, зв'яжіться з нами";
         }
         if (show) {
-            //show = false;
             showNotification({
                 className: name,
                 id: name,
@@ -87,8 +87,7 @@ export default function App() {
                 message: text,
             });
         }
-    }, []);
-    const [current_lang, setCurrentLang] = useState("de");
+    }, [current_lang, setCurrentLang]);
     const [showHome, setShowHome] = useState(true);
     const [showTraining, setShowTraining] = useState(false);
     const [showUeberUns, setShowUeberUns] = useState(false);
