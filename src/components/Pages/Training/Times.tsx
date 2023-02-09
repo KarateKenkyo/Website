@@ -23,11 +23,11 @@ export default function Times(props: any) {
                     </Grid.Col>
                     <Grid.Col md={6}>
                         <Cards
-                            title={times[current_lang][5]}
-                            desc={times[current_lang][6]}
-                            day={times[current_lang][4]}
-                            time={"19:00 - 21:00"}
-                            color={"orange"}
+                            title={times[current_lang][10]}
+                            desc={times[current_lang][12]}
+                            day={times[current_lang][11]}
+                            time={"08:00 - 12:00"}
+                            color={"grape"}
                         />
                     </Grid.Col>
                 </Grid>
@@ -44,11 +44,11 @@ export default function Times(props: any) {
                     </Grid.Col>
                     <Grid.Col md={6}>
                         <Cards
-                            title={times[current_lang][10]}
-                            desc={times[current_lang][12]}
-                            day={times[current_lang][11]}
-                            time={"08:00 - 12:00"}
-                            color={"grape"}
+                            title={times[current_lang][5]}
+                            desc={times[current_lang][6]}
+                            day={times[current_lang][4]}
+                            time={"19:00 - 21:00"}
+                            color={"orange"}
                         />
                     </Grid.Col>
                 </Grid>
