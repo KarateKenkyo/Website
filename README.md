@@ -11,7 +11,3 @@ Die Offizielle Webseite des 'Karateverein Kenkyo Rheinzabern'
 - Kata, Bunkai, SV, ... Videos aufnehmen
 - Kurzmitgliedschaften Subdomain Page
 
-- Training Schreibfehler 
-  - Trainingszeiten Erwachsenen- und Fortgesch.
-  - Schwarzgurttraining
-
