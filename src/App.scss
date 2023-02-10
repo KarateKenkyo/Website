@@ -50,10 +50,12 @@ a {
     }
 
     .MenuOpen {
+      background-color: #e7e4e4d0;
+      padding: 15px;
+      border-bottom-right-radius: 15px;
       position: fixed;
       top: 0;
       left: 0;
-      margin: 20px;
       z-index: 110;
     }
 
@@ -80,7 +82,7 @@ a {
 
     .Logo {
       position: absolute;
-      width: clamp(40vw, 55vw, 60vw);
+      max-width: 50vw;
     }
 
     .BackgroundImage {
@@ -169,6 +171,12 @@ a {
     .languageChooser:hover {
       cursor: pointer;
     }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .App .LandingPage .Logo {
+    max-width: 90vw;
   }
 }
 

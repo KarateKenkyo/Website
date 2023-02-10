@@ -71,7 +71,7 @@ export default function Header(props: any) {
             </Drawer>
 
             <Group position="center" className="MenuOpen" >
-                <AiOutlineMenu size={55} onClick={() => props.setOpened(true)} />
+                <AiOutlineMenu size={40} onClick={() => props.setOpened(true)} />
             </Group>
         </div>
     );
