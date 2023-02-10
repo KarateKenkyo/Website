@@ -43,13 +43,18 @@ a {
   text-align: center;
 
   .DesktopHeader {
-    z-index: 101;
-    position: fixed;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    width: 100vw;
-    background-color: $white-3;
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .MenuOpen:hover {
+      cursor: pointer;
+    }
+
+    .MenuOpen {
+      position: fixed;
+      top: 0;
+      right: 0;
+      margin: 20px;
+      z-index: 999;
+    }
 
     .Language:hover {
       cursor: pointer;
@@ -59,28 +64,6 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-
-      li {
-        float: right;
-
-        a, .MenuItem {
-          padding: 10px 12px;
-        }
-
-        .MenuItem:hover {
-          cursor: pointer;
-        }
-      }
     }
   }
 

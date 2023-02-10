@@ -16,6 +16,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import {Helmet, HelmetProvider} from "react-helmet-async";
 
 function Body(props: any) {
+    const [opened, setOpened] = useState(false);
     return (
         <>
             <Helmet>
@@ -27,6 +28,9 @@ function Body(props: any) {
                 <link rel="canonical" href="/" />
             </Helmet>
             <Header
+                scrollTo={props.scrollTo}
+                opened={opened}
+                setOpened={setOpened}
                 showHome={props.setShowHome}
                 showTraining={props.setShowTraining}
                 showUeberUns={props.setShowUeberUns}
@@ -147,6 +151,7 @@ export default function App() {
                     </Affix>
                     <div className="App" id="App">
                         <Body
+                            scrollTo={scrollTo}
                             showHome={showHome}
                             showTraining={showTraining}
                             showUeberUns={showUeberUns}

@@ -1,12 +1,14 @@
 // @ts-nocheck
 import React from "react";
 import {items} from "../Content/MenuContent";
-import {Text} from "@mantine/core";
+import {Title, Space} from "@mantine/core";
 
 export default function MenuItems(props: any) {
     let current_lang = props.current_lang;//window.location.href.split("/")[3] as String;
 
     function handleHome() {
+        props.scrollTo({ y: 0 });
+        props.setOpened(false);
         props.showHome(true);
         props.showTraining(false);
         props.showUeberUns(false);
@@ -15,6 +17,8 @@ export default function MenuItems(props: any) {
     }
 
     function handleTraining() {
+        props.scrollTo({ y: 0 });
+        props.setOpened(false);
         props.showHome(false);
         props.showTraining(true);
         props.showUeberUns(false);
@@ -23,6 +27,8 @@ export default function MenuItems(props: any) {
     }
 
     function handleUeberUns() {
+        props.scrollTo({ y: 0 });
+        props.setOpened(false);
         props.showHome(false);
         props.showTraining(false);
         props.showUeberUns(true);
@@ -31,6 +37,8 @@ export default function MenuItems(props: any) {
     }
 
     function handleTermine() {
+        props.scrollTo({ y: 0 });
+        props.setOpened(false);
         props.showHome(false);
         props.showTraining(false);
         props.showUeberUns(false);
@@ -39,6 +47,8 @@ export default function MenuItems(props: any) {
     }
 
     function handleNews() {
+        props.scrollTo({ y: 0 });
+        props.setOpened(false);
         props.showHome(false);
         props.showTraining(false);
         props.showUeberUns(false);
@@ -47,22 +57,16 @@ export default function MenuItems(props: any) {
     }
 
     return (
-        <ul>
-            <li>
-                <Text className="MenuItem" onClick={handleHome}>{items[current_lang][0]}</Text>
-            </li>
-            <li>
-                <Text className="MenuItem" onClick={handleTraining}>{items[current_lang][1]}</Text>
-            </li>
-            <li>
-                <Text className="MenuItem" onClick={handleUeberUns}>{items[current_lang][2]}</Text>
-            </li>
-            <li>
-                <Text className="MenuItem" onClick={handleTermine}>{items[current_lang][3]}</Text>
-            </li>
-            <li>
-                <Text className="MenuItem" onClick={handleNews}>{items[current_lang][4]}</Text>
-            </li>
-        </ul>
+        <>
+            <Title order={1} className="click" onClick={handleHome}>{items[current_lang][0]}</Title>
+            <Space h="xl" />
+            <Title order={1} className="click" onClick={handleTraining}>{items[current_lang][1]}</Title>
+            <Space h="xl" />
+            <Title order={1} className="click" onClick={handleUeberUns}>{items[current_lang][2]}</Title>
+            <Space h="xl" />
+            <Title order={1} className="click" onClick={handleTermine}>{items[current_lang][3]}</Title>
+            <Space h="xl" />
+            <Title order={1} className="click" onClick={handleNews}>{items[current_lang][4]}</Title>
+        </>
     );
 }
