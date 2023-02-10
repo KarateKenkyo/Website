@@ -1,7 +1,8 @@
 import React from "react";
 import MenuItems from "./MenuItems";
-import {Drawer, Group} from "@mantine/core";
+import {Drawer, Group, Title} from "@mantine/core";
 import {AiOutlineMenu} from "@react-icons/all-files/ai/AiOutlineMenu";
+import Seperator from "../Pages/Home/Seperator";
 
 export default function Header(props: any) {
 
@@ -18,6 +19,8 @@ export default function Header(props: any) {
                 overlayOpacity={0.55}
                 overlayBlur={3}
             >
+                <Title order={1}>KENKYO</Title>
+                <Seperator />
                 <MenuItems
                     scrollTo={props.scrollTo}
                     opened={props.opened}
@@ -29,6 +32,14 @@ export default function Header(props: any) {
                     showNews={props.showNews}
                     current_lang={props.current_lang}
                 />
+                <Seperator />
+                <div>
+                    <Title order={4}>Vorstand</Title>
+                    <div>Zsolt Penderik</div>
+                    <div>Rappengasse 32</div>
+                    <div>76764 Rheinzabern</div>
+                </div>
+                <Seperator />
             </Drawer>
 
             <Group position="center" className="MenuOpen" >
