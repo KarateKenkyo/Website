@@ -9,7 +9,7 @@ export default function Cards(props: any) {
                 </Card.Section>
 
                 <Group position="apart" mt="md" mb="xs">
-                    <Title order={4}>{props.title}</Title>
+                    <Title ta="left" order={4}>{props.title}</Title>
                 </Group>
 
                 <Text ta="left" size="sm" color="dimmed">
