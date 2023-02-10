@@ -51,9 +51,9 @@ a {
     .MenuOpen {
       position: fixed;
       top: 0;
-      right: 0;
+      left: 0;
       margin: 20px;
-      z-index: 999;
+      z-index: 110;
     }
 
     .Language:hover {
