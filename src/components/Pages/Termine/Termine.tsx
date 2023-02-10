@@ -11,7 +11,7 @@ import {noTermine, termine, termineHeader} from "../../Content/TermineContent";
 
 export default function Termine(props: any) {
     let current_lang = props.current_lang;
-    const [noData, setNoData] = useState(termine[current_lang].length === 0);
+    const [noData,] = useState(termine[current_lang].length === 0);
     let rows: any;
     for (let i = 0; i < termine[current_lang].length; i++) {
         rows = termine[current_lang].map((e) => (

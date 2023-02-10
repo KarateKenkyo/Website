@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Text, Image, Modal, Indicator, Tooltip, ScrollArea} from "@mantine/core";
+import {Text, Image, Modal, Indicator, Tooltip} from "@mantine/core";
 
 export default function FloatingTextToPicture(props: any) {
     const [opened, setOpened] = useState(false);
