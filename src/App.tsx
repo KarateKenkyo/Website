@@ -14,9 +14,10 @@ import {home} from "./components/Content/HomeContent";
 import Header from "./components/Header/Header";
 import LandingPage from "./components/LandingPage/LandingPage";
 import {Helmet, HelmetProvider} from "react-helmet-async";
+import {closeSpotlight, SpotlightAction, SpotlightProvider} from "@mantine/spotlight";
+import {items} from "./components/Content/MenuContent";
 
 function Body(props: any) {
-    const [opened, setOpened] = useState(false);
     return (
         <>
             <Helmet>
@@ -29,13 +30,13 @@ function Body(props: any) {
             </Helmet>
             <Header
                 scrollTo={props.scrollTo}
-                opened={opened}
-                setOpened={setOpened}
-                showHome={props.setShowHome}
-                showTraining={props.setShowTraining}
-                showUeberUns={props.setShowUeberUns}
-                showTermine={props.setShowTermine}
-                showNews={props.setShowNews}
+                opened={props.opened}
+                setOpened={props.setOpened}
+                handleHome={props.handleHome}
+                handleTraining={props.handleTraining}
+                handleUeberUns={props.handleUeberUns}
+                handleTermine={props.handleTermine}
+                handleNews={props.handleNews}
                 current_lang={props.current_lang} />
              <LandingPage
                 showHome={props.showHome}
@@ -66,6 +67,7 @@ function Body(props: any) {
 export default function App() {
     const [scroll, scrollTo] = useWindowScroll();
     const [current_lang, setCurrentLang] = useState("de");
+    const [opened, setOpened] = useState(false);
 
     useEffect( () =>{
         let name = "";
@@ -123,11 +125,90 @@ export default function App() {
             });
         }
     }, [current_lang, setCurrentLang]);
+
     const [showHome, setShowHome] = useState(true);
     const [showTraining, setShowTraining] = useState(false);
     const [showUeberUns, setShowUeberUns] = useState(false);
     const [showTermine, setShowTermine] = useState(false);
     const [showNews, setShowNews] = useState(false);
+
+    function handleHome() {
+        scrollTo({ y: 0 });
+        setOpened(false);
+        setShowHome(true);
+        setShowTraining(false);
+        setShowUeberUns(false);
+        setShowTermine(false);
+        setShowNews(false);
+        closeSpotlight()
+    }
+
+    function handleTraining() {
+        scrollTo({ y: 0 });
+        setOpened(false);
+        setShowHome(false);
+        setShowTraining(true);
+        setShowUeberUns(false);
+        setShowTermine(false);
+        setShowNews(false);
+        closeSpotlight()
+    }
+
+    function handleUeberUns() {
+        scrollTo({ y: 0 });
+        setOpened(false);
+        setShowHome(false);
+        setShowTraining(false);
+        setShowUeberUns(true);
+        setShowTermine(false);
+        setShowNews(false);
+        closeSpotlight()
+    }
+
+    function handleTermine() {
+        scrollTo({ y: 0 });
+        setOpened(false);
+        setShowHome(false);
+        setShowTraining(false);
+        setShowUeberUns(false);
+        setShowTermine(true);
+        setShowNews(false);
+        closeSpotlight()
+    }
+
+    function handleNews() {
+        scrollTo({ y: 0 });
+        setOpened(false);
+        setShowHome(false);
+        setShowTraining(false);
+        setShowUeberUns(false);
+        setShowTermine(false);
+        setShowNews(true);
+        closeSpotlight()
+    }
+
+    const actions: SpotlightAction[] = [
+        {
+            title: items[current_lang][0],
+            onTrigger: () => handleHome(),
+        },
+        {
+            title: items[current_lang][1],
+            onTrigger: () => handleTraining(),
+        },
+        {
+            title: items[current_lang][2],
+            onTrigger: () => handleUeberUns(),
+        },
+        {
+            title: items[current_lang][3],
+            onTrigger: () => handleTermine(),
+        },
+        {
+            title: items[current_lang][4],
+            onTrigger: () => handleNews(),
+        },
+    ];
 
     return (
         <HelmetProvider>
@@ -135,38 +216,47 @@ export default function App() {
                 withGlobalStyles
                 withNormalizeCSS
             >
-                <NotificationsProvider>
-                    <Affix position={{ bottom: 20, right: 20 }}>
-                        <Transition transition="slide-up" mounted={scroll.y > 0}>
-                            {(transitionStyles) => (
-                                <Button color="gray" compact uppercase
-                                        leftIcon={<AiOutlineArrowUp size={16} />}
-                                        style={transitionStyles}
-                                        onClick={() => scrollTo({ y: 0 })}
-                                >
-                                    {home[current_lang][3]}
-                                </Button>
-                            )}
-                        </Transition>
-                    </Affix>
-                    <div className="App" id="App">
-                        <Body
-                            scrollTo={scrollTo}
-                            showHome={showHome}
-                            showTraining={showTraining}
-                            showUeberUns={showUeberUns}
-                            showTermine={showTermine}
-                            showNews={showNews}
-                            setShowHome={setShowHome}
-                            setShowTraining={setShowTraining}
-                            setShowUeberUns={setShowUeberUns}
-                            setShowTermine={setShowTermine}
-                            setShowNews={setShowNews}
-                            current_lang={current_lang}
-                            setCurrentLang={setCurrentLang}
-                        />
-                    </div>
-                </NotificationsProvider>
+                <SpotlightProvider
+                    actions={actions}
+                    searchPlaceholder="Search..."
+                    shortcut={['mod + P', 'mod + K', '/']}
+                    nothingFoundMessage="Nothing found..."
+                >
+                    <NotificationsProvider>
+                        <Affix position={{ bottom: 20, right: 20 }}>
+                            <Transition transition="slide-up" mounted={scroll.y > 0}>
+                                {(transitionStyles) => (
+                                    <Button color="gray" compact uppercase
+                                            leftIcon={<AiOutlineArrowUp size={16} />}
+                                            style={transitionStyles}
+                                            onClick={() => scrollTo({ y: 0 })}
+                                    >
+                                        {home[current_lang][3]}
+                                    </Button>
+                                )}
+                            </Transition>
+                        </Affix>
+                        <div className="App" id="App">
+                            <Body
+                                opened={opened}
+                                setOpened={setOpened}
+                                scrollTo={scrollTo}
+                                showHome={showHome}
+                                showTraining={showTraining}
+                                showUeberUns={showUeberUns}
+                                showTermine={showTermine}
+                                showNews={showNews}
+                                handleHome={handleHome}
+                                handleTraining={handleTraining}
+                                handleUeberUns={handleUeberUns}
+                                handleTermine={handleTermine}
+                                handleNews={handleNews}
+                                current_lang={current_lang}
+                                setCurrentLang={setCurrentLang}
+                            />
+                        </div>
+                    </NotificationsProvider>
+                </SpotlightProvider>
             </MantineProvider>
         </HelmetProvider>
     );
