@@ -1,10 +1,12 @@
+// @ts-nocheck
 import React from "react";
 import MenuItems from "./MenuItems";
-import {Drawer, Group, Title, Input, Text} from "@mantine/core";
+import {Drawer, Group, Title, Input, Text, Kbd, Space} from "@mantine/core";
 import {AiOutlineMenu} from "@react-icons/all-files/ai/AiOutlineMenu";
 import Seperator from "../Pages/Home/Seperator";
 import {openSpotlight} from "@mantine/spotlight";
 import {BsSearch} from "@react-icons/all-files/bs/BsSearch";
+import {home} from "../Content/HomeContent";
 
 export default function Header(props: any) {
 
@@ -44,12 +46,18 @@ export default function Header(props: any) {
                     <Input.Wrapper
                         style={{width: "100%"}}
                         id="search-input"
-                        label="Durchsuche die Hauptseiten"
-                        description="Diese Funktion ist in aktiver Entwicklung und kann daher noch
-                                        Fehler beinhalten"
+                        label={
+                            <>
+                                {home[props.current_lang][4]}
+                                &shy;
+                                &shy;
+                                &shy;
+                                <Kbd>⌘ + k</Kbd>
+                            </>
+                        }
                     >
+                        <Space h="xs"/>
                         <Input
-                            className="click"
                             radius="xl"
                             component="button"
                             icon={<BsSearch />}
@@ -59,6 +67,7 @@ export default function Header(props: any) {
                         />
                     </Input.Wrapper>
                 </Group>
+                <Seperator />
             </Drawer>
 
             <Group position="center" className="MenuOpen" >

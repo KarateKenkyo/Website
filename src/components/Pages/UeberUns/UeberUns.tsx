@@ -9,7 +9,7 @@ import Persons from "./Persons";
 import Language from "../Footer/Language";
 
 export default function UeberUns(props: any) {
-    let current_lang = props.current_lang;//window.location.href.split("/")[3] as String;
+    let current_lang = props.current_lang;
 
     return (
         <>

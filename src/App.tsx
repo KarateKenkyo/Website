@@ -16,6 +16,10 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import {Helmet, HelmetProvider} from "react-helmet-async";
 import {closeSpotlight, SpotlightAction, SpotlightProvider} from "@mantine/spotlight";
 import {items} from "./components/Content/MenuContent";
+import {dojo, offers, times} from "./components/Content/TrainerContent";
+import {personsContent} from "./components/Content/PersonsContent";
+import {termineTypes} from "./components/Content/TermineContent";
+import {news1, news2, news3} from "./components/Content/NewsContent";
 
 function Body(props: any) {
     return (
@@ -194,18 +198,22 @@ export default function App() {
         },
         {
             title: items[current_lang][1],
+            description: times[current_lang][0] + ", " + offers[current_lang][0] + ", " + dojo[current_lang][0],
             onTrigger: () => handleTraining(),
         },
         {
             title: items[current_lang][2],
+            description: personsContent[current_lang][0] + ", " + personsContent[current_lang][2] + ", " + personsContent[current_lang][12],
             onTrigger: () => handleUeberUns(),
         },
         {
             title: items[current_lang][3],
+            description: termineTypes[current_lang][0] + ", " + termineTypes[current_lang][1] + ", " + termineTypes[current_lang][2],
             onTrigger: () => handleTermine(),
         },
         {
             title: items[current_lang][4],
+            description: news1[current_lang][1] + ", " + news2[current_lang][1] + ", " + news3[current_lang][1],
             onTrigger: () => handleNews(),
         },
     ];

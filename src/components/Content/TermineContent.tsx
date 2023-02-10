@@ -16,6 +16,54 @@ export const noTermine = {
     ]
 }
 
+export const termine = {
+    "de":  [
+        { event: "Lehrgang", date: "18.03.2023", location: "Neutraubling (GER)", organizer: "JKF", info: "-" },
+    ],
+    "en": [
+        { event: "Course", date: "18.03.2023", location: "Neutraubling (GER)", organizer: "JKF", info: "-" },
+    ],
+    "ja": [
+        { event: "コース", date: "18.03.2023", location: "Neutraubling (GER)", organizer: "JKF", info: "-" },
+    ],
+    "un": [
+        { event: "Tanfolyam", date: "18.03.2023", location: "Neutraubling (GER)", organizer: "JKF", info: "-" },
+    ],
+    "uk": [
+        { event: "Звичайно", date: "18.03.2023", location: "Neutraubling (GER)", organizer: "JKF", info: "-" },
+    ]
+}
+
+
+
+export const termineTypes = {
+    "de":  [
+        "Lehrgang",
+        "Prüfung",
+        "Wettkämpfe",
+    ],
+    "en": [
+        "course",
+        "exam",
+        "competitions",
+    ],
+    "ja": [
+        "コース ",
+        "検査 ",
+        "競技 ",
+    ],
+    "un": [
+        "Tanfolyam",
+        "vizsgálat",
+        "versenyek",
+    ],
+    "uk": [
+        "Курс",
+        "обстеження",
+        "змагання",
+    ]
+}
+
 export const termineHeader = {
     "de":  [
         "Event",
@@ -51,24 +99,5 @@ export const termineHeader = {
         "Місце",
         "Хазяїн",
         "Інформація"
-    ]
-}
-
-
-export const termine = {
-    "de":  [
-        { event: "Lehrgang", date: "18.03.2023", location: "Neutraubling (GER)", organizer: "JKF", info: "-" },
-    ],
-    "en": [
-        { event: "Course", date: "18.03.2023", location: "Neutraubling (GER)", organizer: "JKF", info: "-" },
-    ],
-    "ja": [
-        { event: "コース", date: "18.03.2023", location: "Neutraubling (GER)", organizer: "JKF", info: "-" },
-    ],
-    "un": [
-        { event: "Tanfolyam", date: "18.03.2023", location: "Neutraubling (GER)", organizer: "JKF", info: "-" },
-    ],
-    "uk": [
-        { event: "Звичайно", date: "18.03.2023", location: "Neutraubling (GER)", organizer: "JKF", info: "-" },
     ]
 }

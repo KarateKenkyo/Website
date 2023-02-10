@@ -7,6 +7,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 $white-1: #ccc8c8;
@@ -133,7 +134,7 @@ a {
 
   .HomeBody, .TrainerBody, .VorstandBody, .WeiteresBody, .NewsBody {
     box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 95vh;
+    margin-top: 85vh;
     position: absolute;
     background-color: $white-3;
     width: 100vw;
