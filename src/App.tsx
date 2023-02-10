@@ -13,10 +13,19 @@ import {AiOutlineArrowUp} from "@react-icons/all-files/ai/AiOutlineArrowUp";
 import {home} from "./components/Content/HomeContent";
 import Header from "./components/Header/Header";
 import LandingPage from "./components/LandingPage/LandingPage";
+import {Helmet, HelmetProvider} from "react-helmet-async";
 
 function Body(props: any) {
     return (
         <>
+            <Helmet>
+                <title>Kenkyo Karate</title>
+                <meta
+                    name="description"
+                    content="Karateverein Kenkyo Rheinzabern – Willkommen auf der Homepage des Goju-Ryu Karateverein Kenkyo Rheinzabern e.V"
+                    data-rh="true" />
+                <link rel="canonical" href="/" />
+            </Helmet>
             <Header
                 showHome={props.setShowHome}
                 showTraining={props.setShowTraining}
@@ -117,42 +126,43 @@ export default function App() {
     const [showNews, setShowNews] = useState(false);
 
     return (
-        <MantineProvider
-            withGlobalStyles
-            withNormalizeCSS
-        >
-            <NotificationsProvider>
-                <Affix position={{ bottom: 20, right: 20 }}>
-                    <Transition transition="slide-up" mounted={scroll.y > 0}>
-                        {(transitionStyles) => (
-                            <Button color="gray" compact uppercase
-                                    leftIcon={<AiOutlineArrowUp size={16} />}
-                                    style={transitionStyles}
-                                    onClick={() => scrollTo({ y: 0 })}
-                            >
-                                {home[current_lang][3]}
-                            </Button>
-                        )}
-                    </Transition>
-                </Affix>
-                <div className="App" id="App">
-
-                    <Body
-                        showHome={showHome}
-                        showTraining={showTraining}
-                        showUeberUns={showUeberUns}
-                        showTermine={showTermine}
-                        showNews={showNews}
-                        setShowHome={setShowHome}
-                        setShowTraining={setShowTraining}
-                        setShowUeberUns={setShowUeberUns}
-                        setShowTermine={setShowTermine}
-                        setShowNews={setShowNews}
-                        current_lang={current_lang}
-                        setCurrentLang={setCurrentLang}
-                    />
-                </div>
-            </NotificationsProvider>
-        </MantineProvider>
+        <HelmetProvider>
+            <MantineProvider
+                withGlobalStyles
+                withNormalizeCSS
+            >
+                <NotificationsProvider>
+                    <Affix position={{ bottom: 20, right: 20 }}>
+                        <Transition transition="slide-up" mounted={scroll.y > 0}>
+                            {(transitionStyles) => (
+                                <Button color="gray" compact uppercase
+                                        leftIcon={<AiOutlineArrowUp size={16} />}
+                                        style={transitionStyles}
+                                        onClick={() => scrollTo({ y: 0 })}
+                                >
+                                    {home[current_lang][3]}
+                                </Button>
+                            )}
+                        </Transition>
+                    </Affix>
+                    <div className="App" id="App">
+                        <Body
+                            showHome={showHome}
+                            showTraining={showTraining}
+                            showUeberUns={showUeberUns}
+                            showTermine={showTermine}
+                            showNews={showNews}
+                            setShowHome={setShowHome}
+                            setShowTraining={setShowTraining}
+                            setShowUeberUns={setShowUeberUns}
+                            setShowTermine={setShowTermine}
+                            setShowNews={setShowNews}
+                            current_lang={current_lang}
+                            setCurrentLang={setCurrentLang}
+                        />
+                    </div>
+                </NotificationsProvider>
+            </MantineProvider>
+        </HelmetProvider>
     );
 }
