@@ -8,6 +8,9 @@ export default function Header(props: any) {
     return (
         <div className={"DesktopHeader"} id={"DesktopHeader"}>
             <Drawer
+                transition="rotate-left"
+                transitionDuration={250}
+                transitionTimingFunction="ease"
                 opened={props.opened}
                 onClose={() => props.setOpened(false)}
                 padding="xl"
