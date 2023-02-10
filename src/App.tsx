@@ -22,7 +22,7 @@ function Body(props: any) {
                 <title>Kenkyo Karate</title>
                 <meta
                     name="description"
-                    content="Karateverein Kenkyo Rheinzabern e.V"
+                    content="Homepage des Goju-Ryu Karateverein Kenkyo Rheinzabern e.V"
                     data-rh="true" />
                 <link rel="canonical" href="/" />
             </Helmet>
