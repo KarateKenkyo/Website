@@ -113,7 +113,7 @@ export default function App() {
                 disallowClose: false,
                 color: 'blue',
                 loading: false,
-                autoClose: false,
+                autoClose: true,
                 message: "Diese Website nutzt keine Cookies zur Datenerhebung und Statistik.",
             });
 
@@ -124,7 +124,7 @@ export default function App() {
                 disallowClose: false,
                 color: 'red',
                 loading: false,
-                autoClose: false,
+                autoClose: true,
                 message: "Diese Website befindet sich noch in der aktiven Entwicklung und kann sommit Fehler aufweißen. Sollten Sie einen entdecken, dann meldet diese bitte dem zweiten Vorstand.",
             });
         }

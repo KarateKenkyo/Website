@@ -3,7 +3,6 @@ import {
     Title,
     Text,
     Badge,
-    Button,
     Card,
     Flex,
     Group,
@@ -16,8 +15,8 @@ import TextToPage from "../../FloatingElement/TextToPage";
 import {personsContent, raphaeleContent, zsoltContent} from "../../Content/PersonsContent";
 import Seperator from "../Home/Seperator";
 
-function MyCard(props: any) {
-    let current_lang = props.current_lang;     return (
+function SubCard(props: any) {
+    return (
         <Card shadow="sm" p="lg" radius="md" withBorder className={"MyCard"}>
             <Card.Section>
                 <Image
@@ -50,7 +49,13 @@ function MyCard(props: any) {
             </Group>
 
             <Text ta="left" c="dimmed">{props.position}</Text>
+        </Card>
+    );
+}
 
+function MyCard(props: any) {
+    if (props.fulltext || props.champion) {
+        return (
             <TextToPage
                 not_fullscreen={true}
                 current_lang={props.current_lang}
@@ -58,15 +63,24 @@ function MyCard(props: any) {
                 showButton={true}
                 size="xl"
                 openingText={
-                    <Button
-                        variant="gradient"
-                        gradient={{ from: props.color, to: props.color, deg: 0 }}
-                        fullWidth
-                        mt="md"
-                        radius="md"
-                    >
-                        {personsContent[current_lang][9]}
-                    </Button>
+                    <SubCard
+                        current_lang={props.current_lang}
+                        title={props.title}
+                        color={props.color}
+                        grade={props.grade}
+                        position={props.position}
+                        url={props.url}
+                        champion={props.champion}
+                        fulltext={props.fulltext}
+                        succ1={props.succ1}
+                        succ2={props.succ2}
+                        succ3={props.succ3}
+                        succ4={props.succ4}
+                        succ5={props.succ5}
+                        succ6={props.succ6}
+                        succ7={props.succ7}
+                        succ8={props.succ8}
+                    />
                 }
                 title={<Title order={1}>{props.title}</Title>}
                 content={
@@ -104,13 +118,37 @@ function MyCard(props: any) {
                             </>
                         )}
                     </div>
-                } />
-        </Card>
-    );
+                }
+            />
+        );
+    } else {
+        return (
+            <SubCard
+                current_lang={props.current_lang}
+                title={props.title}
+                color={props.color}
+                grade={props.grade}
+                position={props.position}
+                url={props.url}
+                champion={props.champion}
+                fulltext={props.fulltext}
+                succ1={props.succ1}
+                succ2={props.succ2}
+                succ3={props.succ3}
+                succ4={props.succ4}
+                succ5={props.succ5}
+                succ6={props.succ6}
+                succ7={props.succ7}
+                succ8={props.succ8}
+            />
+        );
+    }
+
 }
 
 export default function Persons(props: any) {
-    let current_lang = props.current_lang;     return (
+    let current_lang = props.current_lang;
+    return (
         <>
             <Flex
                 mih={50}

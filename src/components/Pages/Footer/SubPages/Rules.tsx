@@ -1,7 +1,7 @@
 // @ts-nocheck
 import MyContent from "../../../Utils/MyContent";
 import {verhalten} from "../../../Content/FooterContent";
-import {Title} from "@mantine/core";
+import {Container, Title} from "@mantine/core";
 import React from "react";
 import TextToPage from "../../../FloatingElement/TextToPage";
 import MyTitle from "../../../Utils/MyTitle";
@@ -15,7 +15,7 @@ export default function Rules(props: any) {
             openingText={verhalten[current_lang][0]}
             title={<Title order={1}>{verhalten[current_lang][0]}</Title>}
             content={
-                <>
+                <Container>
                     <MyContent content={verhalten[current_lang][2]} />
                     <MyTitle content={verhalten[current_lang][3]} />
                     <MyContent content={verhalten[current_lang][4]} />
@@ -55,7 +55,7 @@ export default function Rules(props: any) {
                     <MyTitle content={verhalten[current_lang][38]} />
                     <MyContent content={verhalten[current_lang][39]} />
                     <MyContent content={verhalten[current_lang][40]} />
-                </>
+                </Container>
             }/>
     );
 }
