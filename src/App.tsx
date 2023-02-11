@@ -21,6 +21,7 @@ import {news1, news2, news3} from "./components/Content/NewsContent";
 import Times from "./components/Pages/Training/Times";
 import Offers from "./components/Pages/Training/Offers";
 import Location from "./components/Pages/Training/Location";
+import {personsContent} from "./components/Content/PersonsContent";
 
 function Body(props: any) {
     return (
@@ -259,6 +260,7 @@ export default function App() {
         },
         {
             title: items[current_lang][2],
+            description: personsContent[current_lang][0] + ", " + personsContent[current_lang][2] + ", " + personsContent[current_lang][12],
             onTrigger: () => handleUeberUns(),
         },
         {

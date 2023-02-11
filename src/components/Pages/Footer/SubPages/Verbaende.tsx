@@ -25,6 +25,10 @@ export default function Verbaende(props: any) {
                         radius={"md"}
                         alt={"JKF Logo"}
                         src={"https://www.goju-kai.de/images/345.jpg"} />
+                    <Image
+                        radius={"md"}
+                        alt={"GKD Logo"}
+                        src={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/GKD.webp"} />
                 </>
             } />
     );

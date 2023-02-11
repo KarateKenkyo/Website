@@ -174,7 +174,7 @@ export default function Persons(props: any) {
                     color={"dark"}
                     grade={"1. Dan"}
                     position={personsContent[current_lang][0] + ", " + personsContent[current_lang][6]}
-                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-2.jpeg"}
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Michael.jpg"}
                     champion={true}
                     fulltext=""
                     succ1={zsoltContent[current_lang][0]}

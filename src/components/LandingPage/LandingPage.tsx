@@ -7,9 +7,9 @@ export default function LandingPage(props: any) {
     if (props.showHome) {
         url = "https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-5.jpeg";
     } else if (props.showTrainingLocation) {
-        url = "https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-8.jpeg";
+        url = "https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-2.jpeg";
     } else if (props.showTrainingTimes) {
-        url = "https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-8.jpeg";
+        url = "https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-6.jpeg";
     } else if (props.showTrainingOffer) {
         url = "https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-8.jpeg";
     } else if (props.showUeberUns) {
