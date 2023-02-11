@@ -4,7 +4,6 @@ import './App.scss';
 import {Affix, Button, MantineProvider, Transition} from "@mantine/core";
 import {NotificationsProvider, showNotification} from "@mantine/notifications";
 import Home from "./components/Pages/Home/Home";
-import Training from "./components/Pages/Training/Training";
 import UeberUns from "./components/Pages/UeberUns/UeberUns";
 import News from "./components/Pages/News/News";
 import Termine from "./components/Pages/Termine/Termine";
@@ -17,9 +16,11 @@ import {Helmet, HelmetProvider} from "react-helmet-async";
 import {closeSpotlight, SpotlightAction, SpotlightProvider} from "@mantine/spotlight";
 import {items} from "./components/Content/MenuContent";
 import {dojo, offers, times} from "./components/Content/TrainerContent";
-import {personsContent} from "./components/Content/PersonsContent";
 import {termineTypes} from "./components/Content/TermineContent";
 import {news1, news2, news3} from "./components/Content/NewsContent";
+import Times from "./components/Pages/Training/Times";
+import Offers from "./components/Pages/Training/Offers";
+import Location from "./components/Pages/Training/Location";
 
 function Body(props: any) {
     return (
@@ -37,21 +38,31 @@ function Body(props: any) {
                 opened={props.opened}
                 setOpened={props.setOpened}
                 handleHome={props.handleHome}
-                handleTraining={props.handleTraining}
+                handleTrainingTimes={props.handleTrainingTimes}
+                handleTrainingOffer={props.handleTrainingOffer}
+                handleTrainingLocation={props.handleTrainingLocation}
                 handleUeberUns={props.handleUeberUns}
                 handleTermine={props.handleTermine}
                 handleNews={props.handleNews}
                 current_lang={props.current_lang} />
              <LandingPage
                 showHome={props.showHome}
-                showTraining={props.showTraining}
+                showTrainingLocation={props.showTrainingLocation}
+                showTrainingTimes={props.showTrainingTimes}
+                showTrainingOffer={props.showTrainingOffer}
                 showUeberUns={props.showUeberUns}
                 showTermine={props.showTermine}
                 showNews={props.showNews}/>
             {props.showHome && <Home
                                     setCurrentLang={props.setCurrentLang}
                                     current_lang={props.current_lang}/>}
-            {props.showTraining && <Training
+            {props.showTrainingTimes && <Times
+                                    setCurrentLang={props.setCurrentLang}
+                                    current_lang={props.current_lang}/>}
+            {props.showTrainingOffer && <Offers
+                                    setCurrentLang={props.setCurrentLang}
+                                    current_lang={props.current_lang}/>}
+            {props.showTrainingLocation && <Location
                                     setCurrentLang={props.setCurrentLang}
                                     current_lang={props.current_lang}/>}
             {props.showUeberUns && <UeberUns
@@ -131,7 +142,9 @@ export default function App() {
     }, [current_lang, setCurrentLang]);
 
     const [showHome, setShowHome] = useState(true);
-    const [showTraining, setShowTraining] = useState(false);
+    const [showTrainingLocation, setShowTrainingLocation] = useState(false);
+    const [showTrainingTimes, setShowTrainingTimes] = useState(false);
+    const [showTrainingOffer, setShowTrainingOffer] = useState(false);
     const [showUeberUns, setShowUeberUns] = useState(false);
     const [showTermine, setShowTermine] = useState(false);
     const [showNews, setShowNews] = useState(false);
@@ -140,21 +153,51 @@ export default function App() {
         scrollTo({ y: 0 });
         setOpened(false);
         setShowHome(true);
-        setShowTraining(false);
+        setShowTrainingLocation(false);
         setShowUeberUns(false);
         setShowTermine(false);
         setShowNews(false);
+        setShowTrainingTimes(false);
+        setShowTrainingOffer(false);
         closeSpotlight()
     }
 
-    function handleTraining() {
+    function handleTrainingLocation() {
         scrollTo({ y: 0 });
         setOpened(false);
         setShowHome(false);
-        setShowTraining(true);
+        setShowTrainingLocation(true);
         setShowUeberUns(false);
         setShowTermine(false);
         setShowNews(false);
+        setShowTrainingTimes(false);
+        setShowTrainingOffer(false);
+        closeSpotlight()
+    }
+
+    function handleTrainingTimes() {
+        scrollTo({ y: 0 });
+        setOpened(false);
+        setShowHome(false);
+        setShowTrainingLocation(false);
+        setShowUeberUns(false);
+        setShowTermine(false);
+        setShowNews(false);
+        setShowTrainingTimes(true);
+        setShowTrainingOffer(false);
+        closeSpotlight()
+    }
+
+    function handleTrainingOffer() {
+        scrollTo({ y: 0 });
+        setOpened(false);
+        setShowHome(false);
+        setShowTrainingLocation(false);
+        setShowUeberUns(false);
+        setShowTermine(false);
+        setShowNews(false);
+        setShowTrainingTimes(false);
+        setShowTrainingOffer(true);
         closeSpotlight()
     }
 
@@ -162,10 +205,12 @@ export default function App() {
         scrollTo({ y: 0 });
         setOpened(false);
         setShowHome(false);
-        setShowTraining(false);
+        setShowTrainingLocation(false);
         setShowUeberUns(true);
         setShowTermine(false);
         setShowNews(false);
+        setShowTrainingTimes(false);
+        setShowTrainingOffer(false);
         closeSpotlight()
     }
 
@@ -173,10 +218,12 @@ export default function App() {
         scrollTo({ y: 0 });
         setOpened(false);
         setShowHome(false);
-        setShowTraining(false);
+        setShowTrainingLocation(false);
         setShowUeberUns(false);
         setShowTermine(true);
         setShowNews(false);
+        setShowTrainingTimes(false);
+        setShowTrainingOffer(false);
         closeSpotlight()
     }
 
@@ -184,10 +231,12 @@ export default function App() {
         scrollTo({ y: 0 });
         setOpened(false);
         setShowHome(false);
-        setShowTraining(false);
+        setShowTrainingLocation(false);
         setShowUeberUns(false);
         setShowTermine(false);
         setShowNews(true);
+        setShowTrainingTimes(false);
+        setShowTrainingOffer(false);
         closeSpotlight()
     }
 
@@ -197,13 +246,19 @@ export default function App() {
             onTrigger: () => handleHome(),
         },
         {
-            title: items[current_lang][1],
-            description: times[current_lang][0] + ", " + offers[current_lang][0] + ", " + dojo[current_lang][0],
-            onTrigger: () => handleTraining(),
+            title: times[current_lang][0],
+            onTrigger: () => handleTrainingTimes(),
+        },
+        {
+            title: offers[current_lang][0],
+            onTrigger: () => handleTrainingOffer(),
+        },
+        {
+            title: dojo[current_lang][0],
+            onTrigger: () => handleTrainingLocation(),
         },
         {
             title: items[current_lang][2],
-            description: personsContent[current_lang][0] + ", " + personsContent[current_lang][2] + ", " + personsContent[current_lang][12],
             onTrigger: () => handleUeberUns(),
         },
         {
@@ -250,12 +305,16 @@ export default function App() {
                                 setOpened={setOpened}
                                 scrollTo={scrollTo}
                                 showHome={showHome}
-                                showTraining={showTraining}
+                                showTrainingLocation={showTrainingLocation}
+                                showTrainingTimes={showTrainingTimes}
+                                showTrainingOffer={showTrainingOffer}
                                 showUeberUns={showUeberUns}
                                 showTermine={showTermine}
                                 showNews={showNews}
                                 handleHome={handleHome}
-                                handleTraining={handleTraining}
+                                handleTrainingLocation={handleTrainingLocation}
+                                handleTrainingTimes={handleTrainingTimes}
+                                handleTrainingOffer={handleTrainingOffer}
                                 handleUeberUns={handleUeberUns}
                                 handleTermine={handleTermine}
                                 handleNews={handleNews}

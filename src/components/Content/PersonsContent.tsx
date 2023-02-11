@@ -166,30 +166,55 @@ export const zsoltContent = {
         "Kampfrichter",
         "C-Trainer",
         "B-Prüfer",
-        "Ausbildung"
+        "Ausbildung",
+        "Mehrfache Platzierungen auf Landesebene",
+        "Mehrfache Platzierungen auf Bundesebene",
+        "Mehrfache Platzierungen auf Internationaler Ebene",
+        "Mehrfache Platzierungen auf Meister Ebene",
+        "JKF Goju Kai Europameister 2001"
     ],
     "en": [
         "Karate Referee",
         "C-Trainer",
         "B-Examiner",
-        "Training"
+        "Training",
+        "Multiple placements at the state level",
+        "Multiple placements at the national level",
+        "Multiple placements at International level",
+        "Multiple Placements at Master Level",
+        "JKF Goju Kai European Champion 2001"
     ],
     "ja": [
         'レフェリー',
         "Cトレーナー",
         "審査員",
         "トレーニング",
+        "国家レベルでの複数配置 ",
+        "国家レベルでの複数配置 ",
+        "国際的なレベルで複数の入賞 ",
+        "マスターレベルでの複数配置 ",
+        "JKF剛柔会ヨーロッパチャンピオン2001"
     ],
     "un": [
         "Bírók",
         "C tréner",
         "B vizsgáztató",
         "Képzés",
+        "Többszörös elhelyezés állami szinten",
+        "Többszörös elhelyezés nemzeti szinten",
+        "Többszörös helyezések nemzetközi szinten",
+        "Többszörös elhelyezés mesterszinten",
+        "JKF Goju Kai Európa-bajnok 2001"
     ],
     "uk": [
         "Судді",
         "Тренер С",
         "Б-екзаменатор",
         "Навчання",
+        "Багаторазове розміщення на державному рівні",
+        "Багаторазове розміщення на національному рівні",
+        "Багаторазові розміщення на міжнародному рівні",
+        "Кілька місць на магістерському рівні",
+        "Чемпіон Європи з Годзю Кай JKF 2001"
     ]
 }

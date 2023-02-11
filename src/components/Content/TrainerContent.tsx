@@ -28,7 +28,7 @@ export const dojo = {
 
 export const times = {
     "de": [
-        "Unsere Trainingszeiten",
+        "Trainingszeiten",
         "Unsere Karate-Sparte bietet regelmäßige Trainingseinheiten an drei Tagen in der Woche an. Dienstags und Donnerstags finden die Trainings von 18:00 Uhr bis 20:30 Uhr statt, während Freitags von 18:00 Uhr bis 20:30 Uhr spezielles Training für Fortgeschrittene  angeboten wird. Für diejenigen, die ihre Fähigkeiten auf die nächste Stufe bringen möchten, bieten wir auch ein Spezialtraining am Samstag von 8:00 Uhr bis 12:00 Uhr an.",
         "Kinder- und Anfänger Training",
         "Das Kindertraining findet jeden Dienstag und Donnerstag von 18:00 bis 19:00 Uhr statt. Auch Erwachsene Anfänger können daran teilnehmen.",
@@ -116,7 +116,7 @@ export const times = {
 
 export const offers = {
     "de": [
-        "Unsere Angebote an euch",
+        "Angebote",
         "Im folgenden sind unsere 5 Mitgliedschaften aufgeführt. Solltest du Interesse haben, dann kannst du gerne ein Probetraining vereinbaren oder eine Kurzzeitmitgliedschaft buchen. Alle weiteren Informationen erhaltest du nach Kontaktaufnahme bei uns",
         "Normale Mitgliedschaft",
         "Mit 65€ jedes Halbe Jahr erhaltest du unsere Normale Mitgliedschaft beinhaltet die Teilnahme an allen Trainingseinheiten welche von uns bereit gestellt werden. Dies kannst du als Volljährige Person erwerben, es kann Monatlich gekündigt werden, ansonsten wird deine Mitgliedschaft automatisch verlängert.",

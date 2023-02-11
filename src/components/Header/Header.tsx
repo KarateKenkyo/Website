@@ -27,7 +27,9 @@ export default function Header(props: any) {
                 <Seperator />
                 <MenuItems
                     handleHome={props.handleHome}
-                    handleTraining={props.handleTraining}
+                    handleTrainingTimes={props.handleTrainingTimes}
+                    handleTrainingOffer={props.handleTrainingOffer}
+                    handleTrainingLocation={props.handleTrainingLocation}
                     handleUeberUns={props.handleUeberUns}
                     handleTermine={props.handleTermine}
                     handleNews={props.handleNews}

@@ -5,14 +5,18 @@ import {Container, Space} from "@mantine/core";
 import MyContent from "../../Utils/MyContent";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import React from "react";
+import Seperator from "../Home/Seperator";
+import FooterBody from "../Footer/FooterBody";
+import Language from "../Footer/Language";
 
 export default function Location(props: any) {
     let current_lang = props.current_lang;
     return (
-        <>
+        <div className={"TrainerBody"}>
+            <Space h={"xl"} />
+            <MyTitle order={1} content={dojo[current_lang][0]}/>
+            <Seperator />
             <Container>
-                <MyTitle content={dojo[current_lang][0]} />
-                <Space h="xl" />
                 <MyContent content={dojo[current_lang][1]} />
                 <MyContent content={dojo[current_lang][2]} />
             </Container>
@@ -25,6 +29,8 @@ export default function Location(props: any) {
                     <Popup>{dojo[current_lang][0]}</Popup>
                 </Marker>
             </MapContainer>
-        </>
+            <FooterBody current_lang={props.current_lang}/>
+            <Language setCurrentLang={props.setCurrentLang} />
+        </div>
     );
 }

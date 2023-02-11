@@ -81,6 +81,9 @@ function MyCard(props: any) {
                                 {props.succ1 && <Seperator />}
                                 <Text ta="left">{props.succ4}</Text>
                                 <Text ta="left">{props.succ5}</Text>
+                                <Text ta="left">{props.succ6}</Text>
+                                <Text ta="left">{props.succ7}</Text>
+                                <Text ta="left">{props.succ8}</Text>
                                 {props.succ4 && <Seperator />}
 
                                 {props.quote && props.quoteOriginDifferent && (
@@ -129,6 +132,11 @@ export default function Persons(props: any) {
                     succ1={zsoltContent[current_lang][0]}
                     succ2={zsoltContent[current_lang][1]}
                     succ3={zsoltContent[current_lang][2]}
+                    succ4={zsoltContent[current_lang][4]}
+                    succ5={zsoltContent[current_lang][5]}
+                    succ6={zsoltContent[current_lang][6]}
+                    succ7={zsoltContent[current_lang][7]}
+                    succ8={zsoltContent[current_lang][8]}
                 />
                 <MyCard
                     current_lang={props.current_lang}
@@ -174,14 +182,13 @@ export default function Persons(props: any) {
                 />
                 <MyCard
                     current_lang={props.current_lang}
-                    title={"Dr. Evi Gleibs"}
+                    title={"Dr. med. Evi Gleibs"}
                     color={"#6D4326"}
                     grade={"1. Kyu"}
-                    position={personsContent[current_lang][1] + ", " + personsContent[current_lang][7] + ", " + personsContent[current_lang][5]}
+                    position={personsContent[current_lang][1] + ", " + personsContent[current_lang][7]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-4.jpeg"}
-                    champion={true}
+                    champion={false}
                     fulltext={""}
-                    succ1={zsoltContent[current_lang][1] + " " + zsoltContent[current_lang][3]}
                 />
                 <MyCard
                     current_lang={props.current_lang}
