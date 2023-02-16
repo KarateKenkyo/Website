@@ -1,6 +1,7 @@
 // @ts-nocheck
 import {
     Title,
+    Button,
     Text,
     Badge,
     Card,
@@ -12,10 +13,10 @@ import {
 } from "@mantine/core";
 import React from "react";
 import TextToPage from "../../FloatingElement/TextToPage";
-import {personsContent, raphaeleContent, zsoltContent} from "../../Content/PersonsContent";
+import {darjaContent, personsContent, raphaeleContent, zsoltContent} from "../../Content/PersonsContent";
 import Seperator from "../Home/Seperator";
 
-function SubCard(props: any) {
+function MyCard(props: any) {
     return (
         <Card shadow="sm" p="lg" radius="md" withBorder className={"MyCard"}>
             <Card.Section>
@@ -49,13 +50,7 @@ function SubCard(props: any) {
             </Group>
 
             <Text ta="left" c="dimmed">{props.position}</Text>
-        </Card>
-    );
-}
 
-function MyCard(props: any) {
-    if (props.fulltext || props.champion) {
-        return (
             <TextToPage
                 not_fullscreen={true}
                 current_lang={props.current_lang}
@@ -63,24 +58,15 @@ function MyCard(props: any) {
                 showButton={true}
                 size="xl"
                 openingText={
-                    <SubCard
-                        current_lang={props.current_lang}
-                        title={props.title}
-                        color={props.color}
-                        grade={props.grade}
-                        position={props.position}
-                        url={props.url}
-                        champion={props.champion}
-                        fulltext={props.fulltext}
-                        succ1={props.succ1}
-                        succ2={props.succ2}
-                        succ3={props.succ3}
-                        succ4={props.succ4}
-                        succ5={props.succ5}
-                        succ6={props.succ6}
-                        succ7={props.succ7}
-                        succ8={props.succ8}
-                    />
+                    <Button
+                        variant="gradient"
+                        gradient={{ from: props.color, to: props.color, deg: 0 }}
+                        fullWidth
+                        mt="md"
+                        radius="md"
+                    >
+                        {personsContent[props.current_lang][9]}
+                    </Button>
                 }
                 title={<Title order={1}>{props.title}</Title>}
                 content={
@@ -120,30 +106,8 @@ function MyCard(props: any) {
                     </div>
                 }
             />
-        );
-    } else {
-        return (
-            <SubCard
-                current_lang={props.current_lang}
-                title={props.title}
-                color={props.color}
-                grade={props.grade}
-                position={props.position}
-                url={props.url}
-                champion={props.champion}
-                fulltext={props.fulltext}
-                succ1={props.succ1}
-                succ2={props.succ2}
-                succ3={props.succ3}
-                succ4={props.succ4}
-                succ5={props.succ5}
-                succ6={props.succ6}
-                succ7={props.succ7}
-                succ8={props.succ8}
-            />
-        );
-    }
-
+        </Card>
+    );
 }
 
 export default function Persons(props: any) {
@@ -245,8 +209,8 @@ export default function Persons(props: any) {
                     color={"#6D4326"}
                     grade={"1. Kyu"}
                     position={personsContent[current_lang][1]}
-                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/LandingPage-3.jpeg"}
-                    fulltext=""
+                    url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Darja.jpeg"}
+                    fulltext={darjaContent[current_lang][0]}
                 />
                 <MyCard
                     current_lang={props.current_lang}

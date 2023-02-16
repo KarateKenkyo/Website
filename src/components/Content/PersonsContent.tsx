@@ -1,3 +1,21 @@
+export const darjaContent = {
+    "de": [
+        "Hallo, ich bin Darja, 21 Jahre alt und mache seit ich 10 bin Karate. Es ist das Hobby, das ich schon am längsten ausübe und bedeutet mir viel. Es gibt mir Kraft und Selbstsicherheit und hilft mir, mich immer wieder auf meine innere Mitte zu besinnen. Neben dem Karate bin ich gerne kreativ, male, musiziere und schreibe. Außerdem verbringe ich gerne Zeit in der Natur, die mir ebenfalls sehr am Herzen liegt.",
+    ],
+    "en": [
+        "Hello, I'm Darja, 21 years old and I've been doing karate since I was 10. It is the hobby I have been doing for the longest time and it means a lot to me. It gives me strength and self-confidence and helps me to always remember my inner center. Besides karate, I like to be creative, paint, make music and write. I also like to spend time in nature, which is also very close to my heart.",
+    ],
+    "ja": [
+        "こんにちは、私はダーヤ、21歳です。10歳から空手をやっています。空手は私が最も長く続けている趣味であり、私にとってとても大切なものです。空手は私に強さと自信を与えてくれ、自分の内なる中心を何度も見出す手助けをしてくれます。空手以外にも、絵を描いたり、音楽を作ったり、文章を書いたり、クリエイティブになることが好きです。また、自然の中で過ごすことも好きで、これも私の心にとても近いものです",
+    ],
+    "un": [
+        "Helló, Darja vagyok, 21 éves, és 10 éves korom óta karatézom. Ez az a hobbi, amit a leghosszabb ideje űzök, és sokat jelent nekem. Erőt és önbizalmat ad, és segít újra és újra megtalálni a belső középpontomat. A karate mellett szeretek kreatív lenni, festeni, zenélni és írni. Emellett szeretek időt tölteni a természetben, ami szintén nagyon közel áll a szívemhez.",
+    ],
+    "uk": [
+        "Привіт, мене звуть Дар'я, мені 21 рік, і я займаюся карате з 10 років. Це хобі, яким я займаюся найдовше і яке багато для мене значить. Воно дає мені силу і впевненість у собі, допомагає знову і знову знаходити свій внутрішній центр. Окрім карате, я люблю займатися творчістю, малювати, займатися музикою та писати. Я також люблю проводити час на природі, яка також дуже близька моєму серцю",
+    ]
+}
+
 export const textToPage = {
     "de": [
         "Zeige mehr",
