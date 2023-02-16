@@ -50,6 +50,13 @@ export default function FooterBody(props: any) {
             >
                 {!isMobile && <Divider orientation="vertical" /> }
                 <Stack>
+                    <Title order={4}>{footer[current_lang][1]}</Title>
+                    <Imprint current_lang={props.current_lang}/>
+                    <Privacy current_lang={props.current_lang}/>
+                    <Kontakt current_lang={props.current_lang}/>
+                </Stack>
+                {!isMobile && <Divider orientation="vertical" /> }
+                <Stack>
                     <Title order={4}>{footer[current_lang][5]}</Title>
 
                     <Flex
@@ -71,13 +78,6 @@ export default function FooterBody(props: any) {
                             <FAQ current_lang={props.current_lang}/>
                         </Stack>
                     </Flex>
-                </Stack>
-                {!isMobile && <Divider orientation="vertical" /> }
-                <Stack>
-                    <Title order={4}>{footer[current_lang][1]}</Title>
-                    <Imprint current_lang={props.current_lang}/>
-                    <Privacy current_lang={props.current_lang}/>
-                    <Kontakt current_lang={props.current_lang}/>
                 </Stack>
                 {!isMobile && <Divider orientation="vertical" /> }
                 <Stack>
