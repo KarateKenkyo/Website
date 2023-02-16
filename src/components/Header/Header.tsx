@@ -25,24 +25,7 @@ export default function Header(props: any) {
             >
                 <Title order={1}>KENKYO</Title><Text c="dimmed">Staging Umgebung (also nur eine Demo)</Text>
                 <Seperator />
-                <MenuItems
-                    handleHome={props.handleHome}
-                    handleTrainingTimes={props.handleTrainingTimes}
-                    handleTrainingOffer={props.handleTrainingOffer}
-                    handleTrainingLocation={props.handleTrainingLocation}
-                    handleUeberUns={props.handleUeberUns}
-                    handleTermine={props.handleTermine}
-                    handleNews={props.handleNews}
-                    scrollTo={props.scrollTo}
-                    opened={props.opened}
-                    setOpened={props.setOpened}
-                    showHome={props.showHome}
-                    showUeberUns={props.showUeberUns}
-                    showTraining={props.showTraining}
-                    showTermine={props.showTermine}
-                    showNews={props.showNews}
-                    current_lang={props.current_lang}
-                />
+                <MenuItems {...props} />
                 <Seperator />
                 <Group position="left">
                     <Input.Wrapper

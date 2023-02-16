@@ -34,48 +34,15 @@ function Body(props: any) {
                     data-rh="true" />
                 <link rel="canonical" href="/" />
             </Helmet>
-            <Header
-                scrollTo={props.scrollTo}
-                opened={props.opened}
-                setOpened={props.setOpened}
-                handleHome={props.handleHome}
-                handleTrainingTimes={props.handleTrainingTimes}
-                handleTrainingOffer={props.handleTrainingOffer}
-                handleTrainingLocation={props.handleTrainingLocation}
-                handleUeberUns={props.handleUeberUns}
-                handleTermine={props.handleTermine}
-                handleNews={props.handleNews}
-                current_lang={props.current_lang} />
-             <LandingPage
-                showHome={props.showHome}
-                showTrainingLocation={props.showTrainingLocation}
-                showTrainingTimes={props.showTrainingTimes}
-                showTrainingOffer={props.showTrainingOffer}
-                showUeberUns={props.showUeberUns}
-                showTermine={props.showTermine}
-                showNews={props.showNews}/>
-            {props.showHome && <Home
-                                    setCurrentLang={props.setCurrentLang}
-                                    current_lang={props.current_lang}/>}
-            {props.showTrainingTimes && <Times
-                                    setCurrentLang={props.setCurrentLang}
-                                    current_lang={props.current_lang}/>}
-            {props.showTrainingOffer && <Offers
-                                    setCurrentLang={props.setCurrentLang}
-                                    current_lang={props.current_lang}/>}
-            {props.showTrainingLocation && <Location
-                                    setCurrentLang={props.setCurrentLang}
-                                    current_lang={props.current_lang}/>}
-            {props.showUeberUns && <UeberUns
-                                    setCurrentLang={props.setCurrentLang}
-                                    current_lang={props.current_lang}/>}
-            {props.showTermine && <Termine
-                                    setCurrentLang={props.setCurrentLang}
-                                    current_lang={props.current_lang}/>}
-            {props.showNews && <News
-                                    setCurrentLang={props.setCurrentLang}
-                                    current_lang={props.current_lang}/>}
-
+            <Header {...props}/>
+            <LandingPage {...props} />
+            {props.showHome && <Home {...props} /> }
+            {props.showTrainingTimes && <Times {...props} /> }
+            {props.showTrainingOffer && <Offers {...props} /> }
+            {props.showTrainingLocation && <Location {...props} /> }
+            {props.showUeberUns && <UeberUns {...props} /> }
+            {props.showTermine && <Termine {...props} /> }
+            {props.showNews && <News {...props} /> }
         </>
     );
 }
