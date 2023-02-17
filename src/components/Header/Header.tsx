@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
 import MenuItems from "./MenuItems";
-import {Drawer, Group, Title, Input, Text, Kbd, Space} from "@mantine/core";
+import {Drawer, Group, Title, Input, Kbd, Space} from "@mantine/core";
 import {AiOutlineMenu} from "@react-icons/all-files/ai/AiOutlineMenu";
 import Seperator from "../Pages/Home/Seperator";
 import {openSpotlight} from "@mantine/spotlight";
@@ -23,7 +23,8 @@ export default function Header(props: any) {
                 overlayOpacity={0.55}
                 overlayBlur={3}
             >
-                <Title order={1}>KENKYO</Title><Text c="dimmed">Staging Umgebung (also nur eine Demo)</Text>
+                <Title order={1}>KENKYO</Title>
+                {/*<Text c="dimmed">Staging Umgebung (also nur eine Demo)</Text>*/}
                 <Seperator />
                 <MenuItems {...props} />
                 <Seperator />
