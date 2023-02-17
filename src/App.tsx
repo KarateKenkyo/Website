@@ -22,6 +22,7 @@ import Times from "./components/Pages/Training/Times";
 import Offers from "./components/Pages/Training/Offers";
 import Location from "./components/Pages/Training/Location";
 import {personsContent} from "./components/Content/PersonsContent";
+import {cookies} from "./components/Content/HomeContent";
 
 function Body(props: any) {
     return (
@@ -51,64 +52,6 @@ export default function App() {
     const [scroll, scrollTo] = useWindowScroll();
     const [current_lang, setCurrentLang] = useState("de");
     const [opened, setOpened] = useState(false);
-
-    useEffect( () =>{
-        let name = "";
-        let title = "";
-        let text = "";
-        let show = false;
-        if (current_lang === "ja") {
-            show = true;
-            name = "jap-banner"
-            title = "翻訳エラー";
-            text = "翻訳に一部誤りがある可能性があります。不正確な情報がある場合は、申し訳ございません。誤記を発見された場合は、ご遠慮なく弊社までご連絡ください。";
-        } else if (current_lang === "un") {
-            show = true;
-            name = "hun-banner"
-            title = "Fordítási hiba";
-            text = "A fordítás részben hibás lehet. Elnézést kérünk az esetleges pontatlanságokért. Ha bármilyen hibát észlel, kérjük, ne habozzon kapcsolatba lépni velünk.";
-        } else if (current_lang === "uk") {
-            show = true;
-            name = "ukr-banner"
-            title = "Помилка перекладу";
-            text = "Переклад може бути частково неправильним. Приносимо вибачення за можливі неточності. Якщо ви помітили будь-які помилки, будь ласка, зв'яжіться з нами";
-        } else if (current_lang === "de") {
-            showNotification({
-                className: "cookies",
-                id: "cookies",
-                title: "Cookies",
-                disallowClose: false,
-                color: 'blue',
-                loading: false,
-                autoClose: true,
-                message: "Diese Website nutzt keine Cookies zur Datenerhebung und Statistik.",
-            });
-
-            showNotification({
-                className: "generall",
-                id: "generall",
-                title: "Information",
-                disallowClose: false,
-                color: 'red',
-                loading: false,
-                autoClose: true,
-                message: "Diese Website befindet sich noch in der aktiven Entwicklung und kann sommit Fehler aufweißen. Sollten Sie einen entdecken, dann meldet diese bitte dem zweiten Vorstand.",
-            });
-        }
-        if (show) {
-            showNotification({
-                className: name,
-                id: name,
-                title: title,
-                disallowClose: false,
-                color: 'red',
-                loading: false,
-                autoClose: true,
-                message: text,
-            });
-        }
-    }, [current_lang, setCurrentLang]);
-
     const [showHome, setShowHome] = useState(true);
     const [showTrainingLocation, setShowTrainingLocation] = useState(false);
     const [showTrainingTimes, setShowTrainingTimes] = useState(false);
@@ -116,6 +59,19 @@ export default function App() {
     const [showUeberUns, setShowUeberUns] = useState(false);
     const [showTermine, setShowTermine] = useState(false);
     const [showNews, setShowNews] = useState(false);
+
+    useEffect( () =>{
+        showNotification({
+            className: "cookies",
+            id: "cookies",
+            title: "Cookies",
+            disallowClose: false,
+            color: 'blue',
+            loading: false,
+            autoClose: true,
+            message: cookies[current_lang][0]
+        });
+    }, [current_lang, setCurrentLang]);
 
     function handleHome() {
         scrollTo({ y: 0 });

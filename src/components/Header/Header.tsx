@@ -53,6 +53,7 @@ export default function Header(props: any) {
                     </Input.Wrapper>
                 </Group>
                 <Seperator />
+                Made by Raphaele Salvatore Licciardo
             </Drawer>
 
             <Group position="center" className="MenuOpen" >

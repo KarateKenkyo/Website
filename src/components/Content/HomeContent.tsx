@@ -5,6 +5,24 @@ export const page = {
     un_title: "Hírek",
 }
 
+export const cookies = {
+    "de":  [
+        "Diese Website nutzt keine Cookies zur Datenerhebung und Statistik. Ebenfalls befindet sich diese Website noch in der aktiven Entwicklung und kann sommit Fehler aufweißen. Sollten Sie einen entdecken, dann meldet diese bitte dem zweiten Vorstand."
+    ],
+    "en":  [
+        "This website does not use cookies for data collection and statistics. Also, this website is still under active development and may sommit errors. If you discover any, please report them to the second board."
+    ],
+    "ja":  [
+        "このウェブサイトでは、データ収集や統計のためにクッキーを使用していません。また、このウェブサイトはまだ活発に開発中であり、エラーが含まれている可能性があります。もし発見された場合は、第二掲示板にご報告ください。"
+    ],
+    "un":  [
+        "Ez a weboldal nem használ sütiket adatgyűjtéshez és statisztikákhoz. Továbbá, ez a weboldal még aktív fejlesztés alatt áll, és hibákat tartalmazhat. Ha ilyeneket észlel, kérjük, jelezze azokat a második fórumon."
+    ],
+    "uk":  [
+        "Цей веб-сайт не використовує файли cookie для збору даних і статистики. Крім того, цей веб-сайт все ще перебуває на стадії активної розробки і може містити помилки. Якщо ви їх виявите, будь ласка, повідомте про них на другій дошці",
+    ],
+}
+
 export const home = {
     "de": [
         "Wir sind ein Goju Ryu Karateverein der enormen Wert auf Tradition, Stategie, Philosophie, Technik und Körperkontrolle legt.",
