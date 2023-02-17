@@ -210,7 +210,7 @@ export default function App() {
                     shortcut={['mod + P', 'mod + K', '/']}
                     nothingFoundMessage="Nothing found..."
                 >
-                    <NotificationsProvider>
+                    <NotificationsProvider position="top-right">
                         <Affix position={{ bottom: 20, right: 20 }}>
                             <Transition transition="slide-up" mounted={scroll.y > 0}>
                                 {(transitionStyles) => (
