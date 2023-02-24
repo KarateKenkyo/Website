@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from "react";
+
 import MyTitle from "../../../Utils/MyTitle";
 import MyContent from "../../../Utils/MyContent";
 import {footer, imprint} from "../../../Content/FooterContent";

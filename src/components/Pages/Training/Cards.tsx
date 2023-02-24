@@ -1,5 +1,5 @@
 import {Card, Group, Badge, Space, Title, Text} from "@mantine/core";
-import React from "react";
+
 
 export default function Cards(props: any) {
     return (

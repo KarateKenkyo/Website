@@ -1,6 +1,6 @@
 // @ts-nocheck
 import FooterBody from "../Footer/FooterBody";
-import React from "react";
+
 import Seperator from "../Home/Seperator";
 import {Button, Image, Text, Title, Badge, Group, Flex, Space} from "@mantine/core";
 import TextToPage from "../../FloatingElement/TextToPage";

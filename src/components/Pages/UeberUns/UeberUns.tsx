@@ -1,6 +1,6 @@
 // @ts-nocheck
 import FooterBody from "../Footer/FooterBody";
-import React from "react";
+
 import Seperator from "../Home/Seperator";
 import {Space} from "@mantine/core";
 import MyTitle from "../../Utils/MyTitle";

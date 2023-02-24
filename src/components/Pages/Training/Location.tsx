@@ -4,7 +4,7 @@ import {dojo} from "../../Content/TrainerContent";
 import {Container, Space} from "@mantine/core";
 import MyContent from "../../Utils/MyContent";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
-import React from "react";
+
 import Seperator from "../Home/Seperator";
 import FooterBody from "../Footer/FooterBody";
 import Language from "../Footer/Language";

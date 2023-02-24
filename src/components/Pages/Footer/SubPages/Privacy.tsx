@@ -1,6 +1,6 @@
 // @ts-nocheck
 import {List, Title} from "@mantine/core";
-import React from "react";
+
 import MyTitle from "../../../Utils/MyTitle";
 import MyContent from "../../../Utils/MyContent";
 import {footer, privacy} from "../../../Content/FooterContent";

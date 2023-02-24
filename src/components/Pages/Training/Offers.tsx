@@ -3,7 +3,7 @@ import MyTitle from "../../Utils/MyTitle";
 import {Stack, Container, Grid, Space} from "@mantine/core";
 import MyContent from "../../Utils/MyContent";
 import Kontakt from "../Footer/SubPages/Kontakt";
-import React from "react";
+
 import {offers} from "../../Content/TrainerContent";
 import Cards from "./Cards";
 import Seperator from "../Home/Seperator";

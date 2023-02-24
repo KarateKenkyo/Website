@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from "react";
+
 import MenuItems from "./MenuItems";
 import {Drawer, Group, Title, Input, Kbd, Space} from "@mantine/core";
 import {AiOutlineMenu} from "@react-icons/all-files/ai/AiOutlineMenu";

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from "react";
+
 import FooterBody from "../Footer/FooterBody";
 import { Space } from "@mantine/core";
 import MyTitle from "../../Utils/MyTitle";

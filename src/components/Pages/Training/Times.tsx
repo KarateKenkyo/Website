@@ -2,7 +2,7 @@
 import MyTitle from "../../Utils/MyTitle";
 import {times} from "../../Content/TrainerContent";
 import {Grid, Container, Space} from "@mantine/core";
-import React from "react";
+
 import Cards from "./Cards";
 import Seperator from "../Home/Seperator";
 import FooterBody from "../Footer/FooterBody";

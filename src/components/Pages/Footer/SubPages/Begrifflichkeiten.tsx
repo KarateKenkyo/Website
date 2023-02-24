@@ -2,7 +2,7 @@
 import {Container, Space, Table, Title} from "@mantine/core";
 import MyContent from "../../../Utils/MyContent";
 import {begrifflichkeiten, footer} from "../../../Content/FooterContent";
-import React from "react";
+
 import TextToPage from "../../../FloatingElement/TextToPage";
 
 export default function Begrifflichkeiten(props: any) {

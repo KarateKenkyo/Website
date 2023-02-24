@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { Image } from "@mantine/core";
-import React from "react";
+
 
 export default function Language(props: any) {
 

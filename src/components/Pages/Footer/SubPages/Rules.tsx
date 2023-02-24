@@ -2,7 +2,7 @@
 import MyContent from "../../../Utils/MyContent";
 import {verhalten} from "../../../Content/FooterContent";
 import {Container, Title} from "@mantine/core";
-import React from "react";
+
 import TextToPage from "../../../FloatingElement/TextToPage";
 import MyTitle from "../../../Utils/MyTitle";
 

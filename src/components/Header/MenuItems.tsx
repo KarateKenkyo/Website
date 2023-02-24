@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from "react";
+
 import {items} from "../Content/MenuContent";
 import {Title, Space} from "@mantine/core";
 import {dojo, offers, times} from "../Content/TrainerContent";

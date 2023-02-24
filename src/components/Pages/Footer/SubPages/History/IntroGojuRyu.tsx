@@ -1,6 +1,6 @@
 // @ts-nocheck
 import {Text} from "@mantine/core";
-import React from "react";
+
 import MyTitle from "../../../../Utils/MyTitle";
 import MyContent from "../../../../Utils/MyContent";
 import TextToPicture from "../../../../FloatingElement/TextToPicture";

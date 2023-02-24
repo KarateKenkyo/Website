@@ -1,6 +1,6 @@
 // @ts-nocheck
 import {Blockquote, Text} from "@mantine/core";
-import React from "react";
+
 import Seperator from "./Seperator";
 
 export default function Quote(props: any) {

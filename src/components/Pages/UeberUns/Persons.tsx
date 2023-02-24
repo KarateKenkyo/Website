@@ -11,7 +11,7 @@ import {
     Blockquote,
     Space,
 } from "@mantine/core";
-import React from "react";
+
 import TextToPage from "../../FloatingElement/TextToPage";
 import {darjaContent, personsContent, raphaeleContent, zsoltContent} from "../../Content/PersonsContent";
 import Seperator from "../Home/Seperator";

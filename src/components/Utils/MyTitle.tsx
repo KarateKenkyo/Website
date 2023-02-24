@@ -1,6 +1,6 @@
 // @ts-nocheck
 import {Title} from "@mantine/core";
-import React from "react";
+
 
 export default function MyTitle(props: any) {
     let order = 2;

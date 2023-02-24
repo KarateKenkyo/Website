@@ -1,6 +1,6 @@
 // @ts-nocheck
 import {Accordion, Title, Text} from "@mantine/core";
-import React from "react";
+
 import TextToPage from "../../../FloatingElement/TextToPage";
 import {faq} from "../../../Content/FooterContent";
 

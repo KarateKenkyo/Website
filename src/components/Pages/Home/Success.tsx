@@ -7,7 +7,7 @@ import {IoTrophyOutline} from "@react-icons/all-files/io5/IoTrophyOutline";
 import {succ} from "../../Content/HomeContent";
 import {IoSchoolOutline} from "@react-icons/all-files/io5/IoSchoolOutline";
 import Seperator from "./Seperator";
-import React from "react";
+
 
 export default function Success() {
     let current_lang = window.location.href.split("/")[3] as String;

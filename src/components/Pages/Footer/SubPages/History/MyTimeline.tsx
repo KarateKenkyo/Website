@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { Text, Timeline } from "@mantine/core";
-import React from "react";
+
 import TextToPicture from "../../../../FloatingElement/TextToPicture";
 import {timeline} from "../../../../Content/FooterContent";
 

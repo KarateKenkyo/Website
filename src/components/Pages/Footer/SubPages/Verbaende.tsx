@@ -1,7 +1,7 @@
 // @ts-nocheck
 import {Image, Title} from "@mantine/core";
 import {footer} from "../../../Content/FooterContent";
-import React from "react";
+
 import TextToPage from "../../../FloatingElement/TextToPage";
 
 export default function Verbaende(props: any) {

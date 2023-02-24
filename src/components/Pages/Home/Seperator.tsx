@@ -1,5 +1,5 @@
 import {Divider, Space} from "@mantine/core";
-import React from "react";
+
 
 export default function Seperator() {
     return (

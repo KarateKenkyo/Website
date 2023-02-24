@@ -2,7 +2,7 @@
 import {Button, Flex, Title} from "@mantine/core";
 import Seperator from "../../Home/Seperator";
 import {contact, footer} from "../../../Content/FooterContent";
-import React from "react";
+
 import TextToPage from "../../../FloatingElement/TextToPage";
 
 export default function Kontakt(props: any) {

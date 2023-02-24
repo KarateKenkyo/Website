@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from "react";
+
 import {Container, Title} from "@mantine/core";
 import MyTimeline from "./MyTimeline";
 import IntroGojuRyu from "./IntroGojuRyu";

@@ -1,5 +1,5 @@
 import {Table, Title} from "@mantine/core";
-import React from "react";
+
 import TextToPage from "../../../../FloatingElement/TextToPage";
 import Seperator from "../../../Home/Seperator";
 
