@@ -1,9 +1,10 @@
 // @ts-nocheck
 import MyContent from "../../../Utils/MyContent";
 import {footer, sponsor} from "../../../Content/FooterContent";
-import {Title} from "@mantine/core";
-import React from "react";
+import {Space, Title} from "@mantine/core";
+
 import TextToPage from "../../../FloatingElement/TextToPage";
+import Kontakt from "./Kontakt";
 
 export default function Sponsoren(props: any) {
     let current_lang = props.current_lang;     return (
@@ -18,7 +19,8 @@ export default function Sponsoren(props: any) {
             content={
                 <>
                     <MyContent content={sponsor[current_lang][0]} />
-                    <MyContent content={<a href={"mailto: todo@todo.de"}>todo@todo.de</a>} />
+                    <Kontakt button={true} current_lang={props.current_lang}/>
+                    <Space h="md" />
                     <MyContent content={sponsor[current_lang][1]} />
                 </>
             }/>
