@@ -78,7 +78,6 @@ function MyCard(props: any) {
                                 <Text ta="left">{props.succ1}</Text>
                                 <Text ta="left">{props.succ2}</Text>
                                 <Text ta="left">{props.succ3}</Text>
-                                {props.succ1 && <Seperator />}
                                 <Text ta="left">{props.succ4}</Text>
                                 <Text ta="left">{props.succ5}</Text>
                                 <Text ta="left">{props.succ6}</Text>
@@ -150,13 +149,14 @@ export default function Persons(props: any) {
                     quoteOriginDifferent={true}
                     quoteOrigin={raphaeleContent[current_lang][1]}
                     url={"https://raw.githubusercontent.com/KarateKenkyo/Data/main/assets/Raphaele-2.jpg"}
-                    fulltext={raphaeleContent[current_lang][6]}
+                    fulltext={raphaeleContent[current_lang][7]}
                     champion={true}
                     succ1={raphaeleContent[current_lang][2]}
                     succ2={raphaeleContent[current_lang][3]}
                     succ3={raphaeleContent[current_lang][4]}
-                    succ4={zsoltContent[current_lang][0]}
-                    succ5={zsoltContent[current_lang][1] + " " + zsoltContent[current_lang][3]}
+                    succ4={raphaeleContent[current_lang][5]}
+                    succ5={zsoltContent[current_lang][0]}
+                    succ6={zsoltContent[current_lang][1] + " " + zsoltContent[current_lang][3]}
                 />
             </Flex>
 
