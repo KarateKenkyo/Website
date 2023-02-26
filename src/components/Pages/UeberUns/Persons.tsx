@@ -156,7 +156,7 @@ export default function Persons(props: any) {
                     succ3={raphaeleContent[current_lang][4]}
                     succ4={raphaeleContent[current_lang][5]}
                     succ5={zsoltContent[current_lang][0]}
-                    succ6={zsoltContent[current_lang][1] + " " + zsoltContent[current_lang][3]}
+                    succ6={zsoltContent[current_lang][3] + " " + zsoltContent[current_lang][1]}
                 />
             </Flex>
 

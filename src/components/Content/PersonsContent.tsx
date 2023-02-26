@@ -189,7 +189,7 @@ export const zsoltContent = {
         "Kampfrichter",
         "C-Trainer",
         "B-Prüfer",
-        "Ausbildung",
+        "In Ausbildung für",
         "Mehrfache Platzierungen auf Landesebene",
         "Mehrfache Platzierungen auf Bundesebene",
         "Mehrfache Platzierungen auf Internationaler Ebene",
