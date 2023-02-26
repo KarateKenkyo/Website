@@ -220,7 +220,7 @@ export default function Persons(props: any) {
                     fulltext={raphaeleContent[current_lang][7]}
                     color={"pink"}
                     champion={true}
-                    quote={raphaeleContent[current_lang][8]}
+                    quote={raphaeleContent[current_lang][9]}
                 />
             </Flex>
         </>
