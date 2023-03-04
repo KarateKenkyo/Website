@@ -10,10 +10,12 @@ import {
     Image,
     Blockquote,
     Space,
+    Spoiler,
 } from "@mantine/core";
 
 import TextToPage from "../../FloatingElement/TextToPage";
 import {darjaContent, personsContent, raphaeleContent, zsoltContent} from "../../Content/PersonsContent";
+import {textToPage} from "../../Content/PersonsContent";
 import Seperator from "../Home/Seperator";
 
 function MyCard(props: any) {
@@ -70,39 +72,44 @@ function MyCard(props: any) {
                 }
                 title={<Title order={1}>{props.title}</Title>}
                 content={
-                    <div>
-                        {props.fulltext}
-                        {props.champion && (
-                            <>
-                                <Seperator />
-                                <Text ta="left">{props.succ1}</Text>
-                                <Text ta="left">{props.succ2}</Text>
-                                <Text ta="left">{props.succ3}</Text>
-                                <Text ta="left">{props.succ4}</Text>
-                                <Text ta="left">{props.succ5}</Text>
-                                <Text ta="left">{props.succ6}</Text>
-                                <Text ta="left">{props.succ7}</Text>
-                                <Text ta="left">{props.succ8}</Text>
-                                {props.succ4 && <Seperator />}
+                    <Spoiler 
+                        maxHeight={320} 
+                        showLabel={textToPage[props.current_lang][0]}
+                        hideLabel={textToPage[props.current_lang][1]}>
+                        <div>
+                            {props.fulltext}
+                            {props.champion && (
+                                <>
+                                    <Seperator />
+                                    <Text ta="left">{props.succ1}</Text>
+                                    <Text ta="left">{props.succ2}</Text>
+                                    <Text ta="left">{props.succ3}</Text>
+                                    <Text ta="left">{props.succ4}</Text>
+                                    <Text ta="left">{props.succ5}</Text>
+                                    <Text ta="left">{props.succ6}</Text>
+                                    <Text ta="left">{props.succ7}</Text>
+                                    <Text ta="left">{props.succ8}</Text>
+                                    {props.succ4 && <Seperator />}
 
-                                {props.quote && props.quoteOriginDifferent && (
-                                    <Blockquote cite={"~ " + props.quoteOrigin}>
-                                        <Text ta="left" size="lg">
-                                            {props.quote}
-                                        </Text>
-                                    </Blockquote>
-                                )}
+                                    {props.quote && props.quoteOriginDifferent && (
+                                        <Blockquote cite={"~ " + props.quoteOrigin}>
+                                            <Text ta="left" size="lg">
+                                                {props.quote}
+                                            </Text>
+                                        </Blockquote>
+                                    )}
 
-                                {props.quote && !props.quoteOriginDifferent && (
-                                    <Blockquote>
-                                        <Text ta="left" size="lg">
-                                            {props.quote}
-                                        </Text>
-                                    </Blockquote>
-                                )}
-                            </>
-                        )}
-                    </div>
+                                    {props.quote && !props.quoteOriginDifferent && (
+                                        <Blockquote>
+                                            <Text ta="left" size="lg">
+                                                {props.quote}
+                                            </Text>
+                                        </Blockquote>
+                                    )}
+                                </>
+                            )}
+                        </div>
+                    </Spoiler>
                 }
             />
         </Card>
@@ -152,8 +159,8 @@ export default function Persons(props: any) {
                     fulltext={raphaeleContent[current_lang][7]}
                     champion={true}
                     succ1={raphaeleContent[current_lang][2]}
-                    succ2={raphaeleContent[current_lang][3]}
-                    succ3={raphaeleContent[current_lang][4]}
+                    succ2={zsoltContent[current_lang][4]}
+                    succ3={zsoltContent[current_lang][5]}
                     succ4={raphaeleContent[current_lang][5]}
                     succ5={zsoltContent[current_lang][0]}
                     succ6={zsoltContent[current_lang][3] + " " + zsoltContent[current_lang][1]}
