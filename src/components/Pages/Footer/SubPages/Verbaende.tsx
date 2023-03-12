@@ -1,5 +1,5 @@
 // @ts-nocheck
-import {Image, Title} from "@mantine/core";
+import {Space, Image, Title} from "@mantine/core";
 import {footer} from "../../../Content/FooterContent";
 
 import TextToPage from "../../../FloatingElement/TextToPage";
@@ -17,6 +17,8 @@ export default function Verbaende(props: any) {
             title={<Title order={1}>{footer[current_lang][6]}</Title>}
             content={
                 <>
+                    Inoffiziell (Gespräche laufen)
+                    <Space h="xl" />
                     <Image
                         radius={"md"}
                         alt={"DKV Logo"}

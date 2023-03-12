@@ -1,6 +1,5 @@
 // @ts-nocheck
-import {List, Title} from "@mantine/core";
-
+import {List, Title, Container} from "@mantine/core";
 import MyTitle from "../../../Utils/MyTitle";
 import MyContent from "../../../Utils/MyContent";
 import {footer, privacy} from "../../../Content/FooterContent";
@@ -16,7 +15,7 @@ export default function Privacy(props: any) {
             openingText={footer[current_lang][3]}
             title={<Title order={1}>{footer[current_lang][3]}</Title>}
             content={
-            <div>
+            <Container>
                 <MyContent content={privacy[current_lang][0]} />
 
                 <MyTitle content={privacy[current_lang][1]} />
@@ -87,7 +86,7 @@ export default function Privacy(props: any) {
 
                 <MyTitle content={privacy[current_lang][42]}/>
                 <MyContent content={privacy[current_lang][43]}/>
-            </div>
+            </Container>
         } />
     );
 }

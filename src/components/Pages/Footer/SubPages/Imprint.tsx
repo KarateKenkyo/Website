@@ -3,7 +3,7 @@
 import MyTitle from "../../../Utils/MyTitle";
 import MyContent from "../../../Utils/MyContent";
 import {footer, imprint} from "../../../Content/FooterContent";
-import {Title} from "@mantine/core";
+import {Title, Container} from "@mantine/core";
 import TextToPage from "../../../FloatingElement/TextToPage";
 
 export default function Imprint(props: any) {
@@ -15,7 +15,7 @@ export default function Imprint(props: any) {
                 openingText={footer[current_lang][2]}
                 title={<Title order={1}>{footer[current_lang][2]}</Title>}
                 content={
-                <div>
+                <Container>
                     <MyTitle content={imprint[current_lang][0]}/>
                     <MyContent content={imprint[current_lang][1]} />
 
@@ -43,7 +43,7 @@ export default function Imprint(props: any) {
                     <MyTitle content={imprint[current_lang][16]} />
                     <MyContent content={imprint[current_lang][17]} />
 
-                </div>
+                </Container>
         } />
     );
 }
